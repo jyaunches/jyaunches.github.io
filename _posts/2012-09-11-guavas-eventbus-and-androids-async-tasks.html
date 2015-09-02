@@ -1,0 +1,16 @@
+---
+layout: post
+title: Guava's EventBus and Android's async tasks
+date: '2012-09-11T11:39:00.000-07:00'
+author: Julie Yaunches
+tags:
+- EventBus
+- Android
+- AsyncTask
+- Guava
+modified_time: '2013-03-04T08:06:45.291-08:00'
+blogger_id: tag:blogger.com,1999:blog-1290902463505407248.post-782994257664147133
+blogger_orig_url: http://codingformangos.blogspot.com/2012/09/guavas-eventbus-and-androids-async-tasks.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on">Android requires that you do all network processing on non-UI threads. This is good business as it means unexpected exceptions aren't going to crash your app. It can be a little problematic when you need to be notified of the different outcomes of your various network activity. You need to notify an activity, it needs to notify one of it's components.<br /><br /><h3 style="text-align: center;">The Callback Approach</h3><div>This is essentially like handing a reference to the caller of the process. The process then calls an appropriate method on the caller, depending on the outcome.</div><div><br /></div><script src="https://gist.github.com/3795510.js?file=SendMessageSafeAsyncTask.java"></script><script src="https://gist.github.com/3795572.js?file=gistfile1.txt"></script><script src="https://gist.github.com/3795616.js?file=gistfile1.java"></script><br /><h3 style="text-align: center;">The Guava EventBus Approach</h3><div>This approach decouples the caller from the process. The caller can register for different events on the event bus after which, any process can put that event on the event bus. The registered processes with get notified.</div><div><br /></div><script src="https://gist.github.com/3795675.js?file=gistfile1.txt"></script> You have to define those events but they can be empty or you can wrap anything you need in them. <script src="https://gist.github.com/3795689.js?file=gistfile1.txt"></script><br />Then all you have to do is subscribe for the event from the activity. It doesn't matter what you call the method... what matters is the parameter must match an event that will be put on the message bus. <br /><script src="https://gist.github.com/3795715.js?file=gistfile1.java"></script> <br /><h3 style="text-align: left;">Why is the event bus better?&nbsp;</h3><div style="text-align: left;">Well it decouples the method responding to the outcome of the network activity or whatever from the task doing this. You don't have to pass a reference of the thing doing the responding to the task. Another benefit here is that anything can register to respond to this event. Be it the activity, or one of it's fragments, it's action bar, or whatever. Nice!</div></div>

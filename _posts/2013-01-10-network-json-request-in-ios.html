@@ -1,0 +1,13 @@
+---
+layout: post
+title: Network JSON request in iOS
+date: '2013-01-10T09:59:00.001-08:00'
+author: Julie Yaunches
+tags:
+- iOS REST
+modified_time: '2013-03-04T10:12:11.368-08:00'
+blogger_id: tag:blogger.com,1999:blog-1290902463505407248.post-8106872639063762066
+blogger_orig_url: http://codingformangos.blogspot.com/2013/01/network-json-request-in-ios.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on"><br />I had to dig a little to bring all the components together necessary for something like this so I thought it best to document it.<br /><div><br /></div><div>For the request you need:&nbsp;</div><div><br /></div><div>1. Create an NSMutableRequest</div><div>2. Create an NSURLConnection with the above request</div><div>3. Set the class encapsulating this behavior as the delegate to the connection</div><div>4. Implement the call back methods the connection makes based on the result it gets (so you can decide what to do)</div><div><script src="https://gist.github.com/4504261.js"></script><script src="https://gist.github.com/4504223.js"></script></div></div>

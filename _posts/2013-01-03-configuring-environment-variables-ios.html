@@ -1,0 +1,14 @@
+---
+layout: post
+title: Configuring Environment Variables iOS
+date: '2013-01-03T09:34:00.000-08:00'
+author: Julie Yaunches
+tags:
+- iOS
+- Objective C
+modified_time: '2013-03-04T10:11:42.844-08:00'
+blogger_id: tag:blogger.com,1999:blog-1290902463505407248.post-8641595668030801567
+blogger_orig_url: http://codingformangos.blogspot.com/2013/01/configuring-environment-variables-ios.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on">Say you've got an iOS app talking to a backend api. Maybe this api runs as localhost on your machine when you're in development and maybe you also have staging and production environments out in the cloud somewhere. What's the best way to set this up?<br /><br />I've gone with an encapsulated pList... setup as follows.<br /><br />This is my pList file.<br /><script src="https://gist.github.com/4503211.js"></script> I encapsulate that in a class called EnvironmentVars.<br /><script src="https://gist.github.com/4503229.js"></script><script src="https://gist.github.com/4504041.js"></script><br />After which, I can access it as follows from anywhere. This is an example of using it to create a NSUrl object.<br /><script src="https://gist.github.com/4504055.js"></script> Objective C code can be terse. I find it's best to exercise encapsulation to the extremist point to maintain sanity.</div>

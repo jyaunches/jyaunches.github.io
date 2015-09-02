@@ -1,0 +1,12 @@
+---
+layout: post
+title: Multiple MOCs - Why?
+date: '2013-03-20T16:10:00.001-07:00'
+author: Julie Yaunches
+tags: 
+modified_time: '2013-03-20T16:10:07.888-07:00'
+blogger_id: tag:blogger.com,1999:blog-1290902463505407248.post-1449895331019073771
+blogger_orig_url: http://codingformangos.blogspot.com/2013/03/multiple-mocs-why.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on">I've been using Core Data with my current iOS app since early days. I've been learning more and more about the idiosyncrasies of Core Data and this magical thing called the 'Managed Object Context'.<br /><br />What is the Managed Object Context?<br /><br />I've heard it described as a scratchpad for you persistent data store. You can use it to represent the current state of your data store, or it can function to hold temporary data... that won't be or hasn't yet been persisted to your data store.<br /><br />I think knowing these functions and thinking about them when you first start working with Core Data and managed object contexts is important. Otherwise, you ask yourself... 'Why, do I have to go through this thing to talk to my data store'.<br /><br />After you understand this, you might ask yourself.. 'Well, why do I need to hold temporary data..? Or hold data before persisting it?'<br /><br />I know of few cases where this is useful. <br /><ol style="text-align: left;"><li>Entity creation that spans multiple screens. As a ex-web developer I can think of what a pain it is to do this in the web world. If the user cancels half-way through, you need to ensure that nothing has persisted to the database. In web, you would have to have some fancy javascript or session storage going on to make this work. It's a huge pain! If you use something like an MOC to store this temporary object while the user builds it out, you don't have to persist it until it's completed.</li><li>Data synchronization. Consider a situation where the user creates some entity that needs to be persisted to a back-end server. One strategy for doing this involves hold that entity in an MOC and only merging it to the main MOC and underlying data store when it has successfully been persisted to the back-end server.</li></ol>I bet there are lots of other useful ways of using multiple MOCs. I'm just starting to explore this realm of Core Data and will update this post if I find other use cases! </div>

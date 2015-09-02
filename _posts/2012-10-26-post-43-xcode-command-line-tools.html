@@ -1,0 +1,14 @@
+---
+layout: post
+title: Post 4.3 Xcode & Command line tools
+date: '2012-10-26T02:52:00.001-07:00'
+author: Julie Yaunches
+tags:
+- iOS
+- Xcode
+modified_time: '2013-03-04T10:13:25.563-08:00'
+blogger_id: tag:blogger.com,1999:blog-1290902463505407248.post-1876990779036057386
+blogger_orig_url: http://codingformangos.blogspot.com/2012/10/post-43-xcode-command-line-tools.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on">I'm currently getting new mac mini ready for Ruby on Rails, iOS and Android development. I had Xcode 4.3 installed by default but I didn't have the standard /Developer directory where you get all the lovely command line tools used for Ruby development. Some of my gem installs were working, but some were not. Was seeing stuff like this from the terminal:<br /><br />$ make<br />-bash: make: command not found<br /><br />Weird, right? Where are my command line tools?<br /><br />Turns out, in Xcode 4.3 and later, you have to specifically install these and they aren't in the /Developer &nbsp;directory.<br /><br />Once Xcode is installed. Go into Preferences &gt; Downloads Tab &gt; Components Pane<br /><br />From there install Command Line Tools.<br /><br />Boom. Terminal works.</div>

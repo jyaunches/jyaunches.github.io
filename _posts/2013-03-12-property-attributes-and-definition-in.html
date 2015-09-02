@@ -1,0 +1,12 @@
+---
+layout: post
+title: Property Attributes and Definition in iOS
+date: '2013-03-12T11:10:00.001-07:00'
+author: Julie Yaunches
+tags: 
+modified_time: '2013-03-20T15:08:43.481-07:00'
+blogger_id: tag:blogger.com,1999:blog-1290902463505407248.post-1943531038169780198
+blogger_orig_url: http://codingformangos.blogspot.com/2013/03/property-attributes-and-definition-in.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on">Properties are an alternative to defining instance variables and their corresponding accessors methods. Let's go over the difference<br /><br /><h3 style="text-align: center;">Defining a Property vs. an Instance Variable</h3><div style="text-align: center;"><b><br /></b></div><u>Without Properties</u><br /><u><br /></u><script src="https://gist.github.com/jyaunches/5144997.js"></script><u>With Properties</u><br /><br /><script src="https://gist.github.com/jyaunches/5145047.js"></script> What happens behind the scenes here are declarations for you accessor methods.   This means with the above header and implementation code, you can operate on an instance of this object as follows. <br /><script src="https://gist.github.com/jyaunches/5145105.js"></script> <br /><h3 style="text-align: center;"> Property Attributes</h3><br />Each property has a set of attributes that describe the behavior of the accessor methods for that property. Here's an example.<br /><br />There are three property attributes. Two of these must be specified and the 3rd has a default.<br /><ol style="text-align: left;"><li>The first attribute specifies either <b><i>atomic</i></b> or <b><i>nonatomic</i></b>. This has to do with multi-threading. Let's just say here that if you're doing a standard iOS app you should be using nonatomic.</li><li>The second attribute specifies either <b><i>readwrite</i></b> or <b><i>readonly</i></b>. This tells Objective-C whether it should generate a getter and a setter(readwrite)... or just a getter(readonly).</li><li>The final attribute has to do with memory management, which I've talked about in more detail <a href="http://codingformangos.blogspot.com/2013/03/ios-memory-management-with-arc.html">here</a>. The options here are <i><b>weak</b></i>, <i><b>strong</b></i>, or <i><b>assign</b></i>. Assign is the default which can be used for primitive values that don't point to an object. (like int)</li></ol><br /><script src="https://gist.github.com/jyaunches/5145216.js"></script> </div>

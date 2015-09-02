@@ -1,0 +1,15 @@
+---
+layout: post
+title: iOS development - Writing an app - Pt 2 - Choosing data storage
+date: '2012-09-06T13:08:00.000-07:00'
+author: Julie Yaunches
+tags:
+- Core Data
+- iOS
+- Xcode
+modified_time: '2012-09-28T13:11:51.169-07:00'
+blogger_id: tag:blogger.com,1999:blog-1290902463505407248.post-1735956823330633699
+blogger_orig_url: http://codingformangos.blogspot.com/2012/09/ios-development-choosing-data-storage.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on">This is the 2nd in a series of posts concerning iOS development. I want to begin my app by choosing a data storage technique. I'm leaning towards Core Data because I want to hook it up with my models using xCode's for iOS 5 storyboards... but I realize I need to do my due diligence and research all the options. So, here they are with an outline of my needs.<br /><br />The vision for my app will&nbsp;definitely&nbsp;involve some robust storage capability. Without saying too much, the foundation for my app will be a users ability to build, track, and share recipes. I'd like to investigate my options for this. My research has concluded that in iOS development you have a number of on-device data storage techniques as your disposal.<br /><br /><span style="font-size: large;"><u>Property Lists</u></span> - These are sort of key-value pair storage techniques. You define them programmatically and they're loaded when the app starts. I suppose this is the simplest, most basic option. It's limitation would be you don't get any relational capabilities.<br /><br /><span style="font-size: large; text-decoration: underline;">SQLite</span> - With this option you get the relational thing at least in your database because it's SQL. It's my understanding that the support for this comes from some C libraries included into the iOS framework. Since SQLite works off a single file, you can seed this with your data and load it into your application. I plan to investigate this further in another post. It appears this option involves the requirement of writing your own sql queries. Boo.<br /><br /><span style="font-size: large;"><u>Core Data</u></span> - This is sort of the Maserati option. Core Data is provided and customized to work with xcode development. You get your relational structure. You hook it to your data models via xcode. You don't have to deal with database connections or schemas. It's basically the only option where you get an ORM feeling.<br /><br />My decision is to move forward with Core Data. Not only will it satisfy the curiosity of how storyboards work with it, but it's <i>the</i>&nbsp;ORM option. And I love ORMs. Don't get me wrong, I can write my fair share of SQL, but if there's something out there that does all this for you... why not use it?</div>

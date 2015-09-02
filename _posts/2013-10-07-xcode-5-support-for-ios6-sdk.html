@@ -1,0 +1,12 @@
+---
+layout: post
+title: Xcode 5 support for iOS6 SDK
+date: '2013-10-07T07:58:00.002-07:00'
+author: Julie Yaunches
+tags: 
+modified_time: '2013-10-07T07:58:43.649-07:00'
+blogger_id: tag:blogger.com,1999:blog-1290902463505407248.post-2691671362449306794
+blogger_orig_url: http://codingformangos.blogspot.com/2013/10/xcode-5-support-for-ios6-sdk.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on">Issue:<br /><br />1. You're device is running iOS 7 and so, any apps you deploy to it have to be deployed from Xcode 5.<br />2. You have a project that you'd like to run that has a target SDK of iOS 6. This project uses things like the camera or microphone that have to be tested on a real device?<br /><br />Xcode 5 only ships with support for iOS 7 targets. Blah. But, you can add support for earlier targets if you can get your hands on those earlier SDKs.<br /><br />I needed iOS 6 to run the <a href="https://developer.apple.com/library/ios/samplecode/PhotoPicker/Introduction/Intro.html#//apple_ref/doc/uid/DTS40010196">PhotoPicker sample project</a> on my device. I found that in my Xcode 4 installation at<br /><br />/Applications/Xcode4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk<br /><br />Copy that into the same directory for you Xcode 5 installation and you're off.</div>

@@ -1,0 +1,13 @@
+---
+layout: post
+title: iOS Data Synchronization - How???
+date: '2013-02-25T08:32:00.000-08:00'
+author: Julie Yaunches
+tags:
+- iOS
+modified_time: '2013-03-04T10:13:01.533-08:00'
+blogger_id: tag:blogger.com,1999:blog-1290902463505407248.post-7326170101858070324
+blogger_orig_url: http://codingformangos.blogspot.com/2013/03/ios-data-synchronization-how.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on">I'm working on an iPhone app at the moment and I'm approaching the time when I'll need to do data synchronization with my backend Rails API. Up to this point, I've only pulled data down to the mobile device so the backend has acted as the sort of 'master' of the data. Now, data entered on the device will need to be incorporated into the 'master' data and available to all users.<br /><br />I've sort of been deferring the decision of how to implement this until the last 'responsible' point because it's a daunting task... and done wrong, would perhaps need to be completely done over again in the future.<br /><br />I remember the pain on my last project (an Android tablet app) after we brought in our first solution to data syncing between device and backend. We suffered through 3 months of headache and then gutted the whole thing for another strategy. The odd thing is the initial thing we'd gone for was one of the Android 'recommended approaches'. These things called Cursor Adapters. Steer clear! I'll maybe do a different post on these and why they are painful.<br /><br />So, I'm cautious about using libraries intended to be a one-size-fits-all. Luckily I guess, I haven't actually found any for iOS, so I think I'll be rolling my strategy.<br /><br />These are the questions I'm asking myself.<br /><br />1. How close are the data models between the device and backend?<br />2. How much data will be need to be synchronized?<br />3. How frequently will it need to be synchronized?<br />4. If the user deletes the app and reinstalls it, will data need to be downloaded to the device in the same state as before the delete?<br />5. I'm going to need to know which data came from which user.. how will I tag the data as such?<br />6. How to queue up changes if they are made while the user if offline?<br /><br />Because I don't have a huge amount of data that will need to be synched, my initial approach will be to set up a process that checks for changes across the tables where they might occur (initially only 2 for my case) and then pushes these to my RESTful backend using JSON over an HTTP post request. My backend, will then store these data in separate tables where the user and timestamps are recorded. After this, I should be able to set up another timed request. More posts as I move forward on this!</div>

@@ -1,0 +1,13 @@
+---
+layout: post
+title: AF Networking Simplifies iOS Http Requests
+date: '2013-03-04T08:01:00.000-08:00'
+author: Julie Yaunches
+tags:
+- iOS
+modified_time: '2013-03-06T12:31:36.159-08:00'
+blogger_id: tag:blogger.com,1999:blog-1290902463505407248.post-7399261157889059371
+blogger_orig_url: http://codingformangos.blogspot.com/2013/03/af-networking-simplifies-ios-http.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on">I wrote <a href="http://codingformangos.blogspot.com/2013/01/network-json-request-in-ios.html">this</a> post a month or so ago on implementing http requests using the built in iOS libraries. I've been building a iOS app with a Rails on Mongo instance functioning at the backend API. I just switched everything over to AF Networking, which has helped simplify my network calls greatly!<br /><br />If you compare these two approaches you can see the simplicity AF Networking gets you!<br /><br /><script src="https://gist.github.com/jyaunches/5083231.js"></script>And then you just implement the two methods given to the networking operation callback block. In this case, processResult and processFailure. It's so simple! And so much less code than the<a href="http://codingformangos.blogspot.com/2013/01/network-json-request-in-ios.html"> standard iOS option.</a> <br /><br />The <a href="https://github.com/AFNetworking/AFNetworking">AF Networking github page</a>.</div>
