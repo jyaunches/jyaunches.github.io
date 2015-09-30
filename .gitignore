@@ -6,3 +6,15 @@ codekit-config.json
 node_modules
 Gemfile.lock
 .sass-cache
+
+/xcuserdata/
+xcuserdata/
+.xcuserdatad
+.xcuserdatad/
+
+# Ignore appcode files
+/.idea/
+/.idea/vcs.xml
+.idea
+.idea/
+.idea/workspace.xml
