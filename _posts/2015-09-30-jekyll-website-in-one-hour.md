@@ -30,12 +30,16 @@ You need: RVM, Ruby 2.2.3, RubyGems, Jekyll and Bundler. Install as follows:
 
 [RVM](https://rvm.io/rvm/install) - follow instructions to install this, once installed, install Ruby 2.2.3
 
+{% highlight bash %}
 > rvm install 2.2.3 
+{% endhighlight %}
 
 [RubyGems](https://rubygems.org/pages/download) - follow instructions to install this, once installed, install Jekyll and Bundler gems
 
+{% highlight bash %}
 > gem install jekyll
 > gem install bundler
+{% endhighlight %}
 
 ##2 - Setup your website's repository in github
 
@@ -57,14 +61,18 @@ Now you'll want to run it!
 
 In your terminal, from the directory for this new website, run the following:
 
+{% highlight bash %}
 > bundle install
 > jekyll serve
+{% endhighlight %}
 
 If you then go to http://127.0.0.1:4000/ from your browser, you should see the website running on your local machine!
 
 Do a commit here:
 
+{% highlight bash %}
 > git commit -am"baseline jekyll template for my new website"
+{% endhighlight %}
 
 ##4 - Overview of Jekyll directory structure
 
