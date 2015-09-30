@@ -46,14 +46,18 @@ The opinion of many engineers working in this space is that Bluetooth as a stand
 
 ### Solutions (Hacks)
 
-Following optimization/confirmation of the CoreBluetooth API usage and our peripheral's configurations, our connection issues did not go away. Most of these solutions came from the other BTLE hardware startup companies we opened dialogue with while troubleshooting this issue.
+Following optimization/confirmation of the CoreBluetooth API usage and our peripheral's configurations, our connection issues did not go away. Several of these solutions came from the other BTLE hardware startup companies we opened dialogue with while troubleshooting this issue.
 
-1. Reconnection logic following an non user initated disconnect.
+1. Reconnection logic following an non user initated disconnect. (Literally, detect the disconnection and begin looking for the device again.)
 2. Perform an initial write to your peripheral upon establishing a connection to ensure that it is actually there.
 3. If possible, don't disconnect via CoreBluetooth. Send a command to your peripheral to disconnect itself. (This was a recommendation from another company's engineer.. we did not necessarily observe improved connection stability following this change... but made it non-the-less.)
 4. Reconnect to a known peripheral if possible. 
 
-Our initial implementation involved the following methods
+This last one I'll elaborate on.
+
+#### Initial Scan/Connect Implementation
+
+Involved the following methods:
 
 {% highlight objective-c %}
 - (void)scanForPeripheralsWithServices:(NSArray *)serviceUUIDs options:(NSDictionary *)options;
@@ -70,6 +74,8 @@ Then calling connect with that peripheral
 {% highlight objective-c %}
 - (void)connectPeripheral:(CBPeripheral *)peripheral options:(NSDictionary *)options;
 {% endhighlight %}
+
+#### Improved Scan/Connect Implementation
 
 Our connection stability improved after moving to storing the peripheral's UUID and then reconnecting to the known device using:
 
@@ -88,6 +94,7 @@ And then connecting to the found device:
 Understand your use case.
 
 BTLE app implementations can involve:
+
 * Multiple peripherals at a time 
 * A single peripheral connection at a time, but perhaps many different devices during usage a single user's app.
 * Just one dedicated BTLE peripheral. 

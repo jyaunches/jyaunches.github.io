@@ -1,11 +1,11 @@
 ---
 layout: post
-title: WWDC - CoreBluetooth Lab Findings
-description: "Spoke with Apple CoreBluetooth engineer while at WWDC."
+title: JiffyLogger Released!
+description: "Release of first major cocoapod."
 modified: 2015-06-14
-tags: [CoreBluetooth, WWDC, WWDC Labs, iOS]
+tags: [iOS, CocoaPods, JiffyLogger, CoreBluetooth, Logging]
 image:
-  feature: apple-wwdc-20151.jpg
+  feature: JiffyLoggerLogo.png
   credit: 
   creditlink: 
 ---
