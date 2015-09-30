@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Jekyll
+title: Github pages/Jekyll website setup in 1 hour
 description: "Up and running with Jekyll in 1 hour"
 modified: 2015-09-10
 tags: [Jekyll]
@@ -10,26 +10,32 @@ image:
   creditlink: https://jekyll.github.io
 ---
 
-Get your Github pages/Jekyll website setup in 1 hour.
-
 I recently migrated my personal blog to Github pages and Jekyll and it was so freaking easy it was really quite shocking. The only real difficulty was was that I had to go around to different sources to find all the information I needed to really make it happen.
 
 I decided to coalate it in one place! This is the that information as of Sept 2015.
 
 This post will cover how to:
-- setup your development environment
-- setup github and your website's repository there
-- select an existing jekyll theme
-- overview the jekyll directory struction so that you can make updates to suit your needs
-- review basic jekyll markdown
-- overview publishing your website
-- instructions for linking your domain
+
+* setup your development environment
+* setup github and your website's repository there
+* select an existing jekyll theme
+* overview the jekyll directory struction so that you can make updates to suit your needs
+* review basic jekyll markdown
+* overview publishing your website
+* instructions for linking your domain
 
 ##1 - Your development environment.
 
-You need the following: RVM, Ruby 2.2.3, RubyGems 
+You need: RVM, Ruby 2.2.3, RubyGems, Jekyll and Bundler. Install as follows:
 
-Once you have these you'll need to install the gems: jekyll and bundler
+[RVM](https://rvm.io/rvm/install) - follow instructions to install this, once installed, install Ruby 2.2.3
+
+> rvm install 2.2.3 
+
+[RubyGems](https://rubygems.org/pages/download) - follow instructions to install this, once installed, install Jekyll and Bundler gems
+
+> gem install jekyll
+> gem install bundler
 
 ##2 - Setup your website's repository in github
 
