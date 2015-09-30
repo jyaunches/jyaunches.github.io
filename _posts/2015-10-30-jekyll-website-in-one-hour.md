@@ -5,9 +5,9 @@ description: "Up and running with Jekyll in 1 hour"
 modified: 2015-09-10
 tags: [Jekyll]
 image:
-  feature: 
+  feature: jekyll-logo-light-solid.png
   credit: 
-  creditlink: 
+  creditlink: https://jekyll.github.io
 ---
 
 Get your Github pages/Jekyll website setup in 1 hour.
@@ -21,7 +21,7 @@ This post will cover how to:
 - setup github and your website's repository there
 - select an existing jekyll theme
 - overview the jekyll directory struction so that you can make updates to suit your needs
-- review basic jekyll markup
+- review basic jekyll markdown
 - overview publishing your website
 - instructions for linking your domain
 
@@ -69,7 +69,28 @@ At a minimum.. you're going to need to:
 1. customize the contents of _config.yml
 2. customize the contents of index.html and potentially, header.html and footer.html. (If you want to change things there.)
 
-New Posts
+New Posts/Pages
 
-Pages or page elements are represented with either .html or 
+Pages or page elements are represented with either .html or .md files. Jekyll uses it's own markdown (which we'll get to later). The .md files are ones that contain Jekyll markdown But it will just render .html files as well.
 
+All the templates from you download may organize things differently. So you'll just have to poke around a little to see where they put what. 
+
+Many of the templates will give instructions for getting up and running with that specific template. Use those instructions.
+
+##5 Review of Jekyll Markdown
+
+Jekyll do have a [good source](http://jekyllrb.com/docs/posts/) for this one. Your life will be easier if you use their markdown.
+
+More to fill out here.
+
+##6 Publishing your website.
+
+The way github pages works is the will host basically whatever you've pushed on the master branch of you [github-username].github.io repository. So, once you're happy with it locally, you can commit and push your changes on master. Following this, the website should be viewable at [github-username].github.io.
+
+Whoa! Easy. :-)
+
+As a note, if you're not ready to push any changes out for the world to see, you can commit them on a branch and push that branch to github and the changes will remain there until you merge them onto master.
+
+## Instructions for linking to a domain name.
+
+Once you're really ready for the world to see your new awesome website, you may want to setup a custom domain name. This is super easy, you just need to add a CNAME file to root of your github repository. Github provide instruction [here](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/).
