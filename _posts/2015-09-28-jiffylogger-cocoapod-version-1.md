@@ -16,7 +16,7 @@ Wow! I'm very excited to release my first major CocoaPod.
 
 JiffyLogger is a logging tool that allows you to capture custom events and look at them immediately inside your iOS application.
 
-Logs are stored on the filesystem and writing to the log is buffered and happens on a background thread. Event logging is setup in standard way and is explained further in the 'Quick Start' section of [JiffyLogger's github page](https://github.com/jyaunches/JiffyLogger).
+Logs are stored on the filesystem and writing to the log is buffered and happens on a background thread. Event logging is setup in standard way and is explained further in the 'Quick Start' section of [JiffyLogger's github page](https://github.com/jyaunches/JiffyLogger/wiki/Quick-Start-Guide).
 
 Where JiffyLogger goes beyond your normal logging is it's in-app viewing and log exporting functionality.
 
@@ -57,4 +57,4 @@ Super valuable. Field testing a BTLE device can reveal results quite different f
 
 ## QuickStart
 
-For more information and to get started using JiffyLogger, head on over to [it's Github page](https://github.com/jyaunches/JiffyLogger)!
+For more information and to get started using JiffyLogger, head on over to [it's Github page](https://github.com/jyaunches/JiffyLogger/wiki/Quick-Start-Guide)!
