@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Algorithmic Problem Solving - Introduction
+title: Algorithm Series - Introduction
 description: "Rethinking approach to problem solving"
 modified: 2015-10-28
 tags: [Algorithms, CS Review Series]

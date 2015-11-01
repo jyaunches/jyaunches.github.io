@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Algorithmic Problem Solving - Part 1
+title: Algorithm Series - Understanding the Problem
 description: "Understanding the Problem"
 modified: 2015-10-29
 tags: [Algorithms, CS Review Series]
