@@ -19,7 +19,7 @@ This post is around choosing *how to represent your data*. For me, this means bo
 * Deciding on the appropriate data structure to represent your data
 * Organizing an object model that helps in representing this data
 
-I don't want to dive too deeply into what the different data structures are. But to name a few, they are: [array](https://en.wikipedia.org/wiki/Array_data_type), [set](https://en.wikipedia.org/wiki/Set_(abstract_data_type)), [linked list](https://en.wikipedia.org/wiki/List_(abstract_data_type)), [stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)), [queue](https://en.wikipedia.org/wiki/Queue_(abstract_data_type)), and [graph](https://en.wikipedia.org/wiki/Graph_(abstract_data_type)). What this post will focus is on what you need to think about while deciding which to use.
+I don't want to dive too deeply into what the different data structures are. But to name a few, they are: [array](https://en.wikipedia.org/wiki/Array_data_type), [set](https://en.wikipedia.org/wiki/Set_(abstract_data_type)), [linked list](https://en.wikipedia.org/wiki/List_(abstract_data_type)), [stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)), [queue](https://en.wikipedia.org/wiki/Queue_(abstract_data_type)), and [graph](https://en.wikipedia.org/wiki/Graph_(abstract_data_type)). What this post will focus is on what you need to think about while deciding which to use. Check out the next post for more on specific data structures.
 
 I think the best way to do this is to walk through an example and discuss.
 
@@ -132,6 +132,8 @@ But, then we'd have to calculate the position of the next node to visit. Whereas
 **Step 4** - Decision
 
 It's fairly clear that graph data structure feels like the cleaner, more representative, less restrictive data struction for this problem. That's not to say that upon getting further into the solution and turning up new information that this can't be changed!
+
+One thing that's fairly important here is that you know and understand the capabilities of your optional data structures. Here, recognizing that rewording the problem made it sound an awful lot like graph traversal was key. The next post in this series is going to be a review of problem to data structure mapping.. with example problems and clues about indicative data structures.
 
 
 
