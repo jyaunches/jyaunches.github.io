@@ -13,6 +13,7 @@ image:
 This is the fifth post in a series of posts dedicated to algorithmic problem solving. The focus of this series is on organizing the approach taken to solving such problems and laying out the stages that one should move through. 
 
 The posts prior to this one cover:
+
 * [understanding the problem](http://yaunch.io/data-structures-algorithms-review-2/) 
 * [deciding on a data structure](http://yaunch.io/data-structures-algorithms-review-3/)
 * [data structures examined](http://yaunch.io/data-structures-algorithms-review-4/)
