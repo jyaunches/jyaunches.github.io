@@ -10,7 +10,7 @@ image:
   creditlink: 
 ---
 
-This is the fourth post in a series of posts dedicated to algorithmic problem solving. The focus of this series is on organizing the approach taken to solving such problems and laying out the stages that one should move through. The posts prior to this one covers [understanding the problem](http://yaunch.io/data-structures-algorithms-review-2/) and [deciding on a data structure](http://yaunch.io/data-structures-algorithms-review-3/). This post continues with the data structure discussion and functions more as a cheatsheet for the various data structures you might choose from and what considerations might lead you that choice. It also highlights implementation notes for each.
+This is the fourth post in a series of posts dedicated to algorithmic problem solving. The focus of this series is on organizing the approach taken to solving such problems and laying out the stages that one should move through. The posts prior to this one covers [understanding the problem](http://yaunch.io/data-structures-algorithms-review-2/) and [deciding on a data structure](http://yaunch.io/data-structures-algorithms-review-3/). This post continues with the data structure discussion and functions more as a cheatsheet for the various data structures you might choose from and what considerations might lead you to that choice. It also highlights implementation notes for each.
 
 # Data Structures
 
