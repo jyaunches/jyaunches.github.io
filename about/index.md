@@ -13,4 +13,4 @@ Hi there. To summarize, I'm a totally lover of making things. That includes buil
 
 My dog is pretty cool. She's a hound mix that loves to go hiking with me and is approaching professional levels in her ball fetching practice. It's really quite impressive.
 
-Originally hailing from the midwest, I now live in Brooklyn, NY. It's a pretty different place, let me tell you.
+Originally hailing from the midwest of the United States, over the past 10 years, I've lived and worked across 4 continents. I now find myself back in the US.
