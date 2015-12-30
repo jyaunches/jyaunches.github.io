@@ -35,23 +35,16 @@ There's space in all of these areas for major improvement. Let's look at the cur
 
 ### Energy Production
 
-The bottom line is that we need energy and we're going to need more and more of it. To limit greenhouse gas emmissions, and keep global temperatures from rising above 2 degrees, we need to move away from energy sources that rely on the emmission of CO2 (or other greenhouse gases). 
+The bottom line is that we need energy and we're going to need more and more of it. We do have alternative, clean sources of energy available: solar, wind, geothermal, hydroelectric, biomass, and nuclear. But, today we largely rely on coal, oil and natural gas. 
 
-We do have alternative, clean sources of energy available: solar, wind, geothermal, hydroelectric, biomass, and nuclear. But, today we largely rely on coal, oil and natural gas. The picture of our energy usage in the US is well represented in this graph below.
+{% capture images %}
+	/images/Energy_US_2014.png	
+{% endcapture %}
+{% include gallery images=images caption="US energy usage breakdown 2014" cols=1 %}
 
-<figure class="full">
-	<a href="https://flowcharts.llnl.gov/"><img src="/images/Energy_US_2014.png" alt=""></a>
-</figure>
+Note that clean, renewable energy sources represent < 10%, with the bulk of that in nuclear (which is debatable in terms of cleanliness and long-term liability). These percentages need to shift.
 
-This needs to change. Also note that clean, renewable energy sources represent < 10%, with the bulk of that in nuclear (which is debatable in terms of cleanliness and long-term liability).
-
-#### Technology changes needed here:
-
-The bottom line is that we need a much higher volume of alternative clean energy at a lower price. To achieve that technology to increase volume is needed across:
-
-* Existing renewable, clean energies
-* New forms of renewable, clean energy
-* Clean, but perhaps non-renewable energy
+What needs to change to bring these shifts about?
 
 ### Energy Networks
 
