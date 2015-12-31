@@ -72,7 +72,7 @@ Similar to the idea above, currently energy needs to be produced somewhat nearby
 
 Innovation needs to happen in both enabling energy production in many different environments and in new energy transportation networks that can efficiently move energy around where it's needed.
 
-### Consumption
+#### Consumption
 
 It may come as no suprise, but the US and many other first world countries consume the most energy per person globally.
 
