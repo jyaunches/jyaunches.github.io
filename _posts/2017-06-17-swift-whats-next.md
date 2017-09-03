@@ -10,24 +10,31 @@ image:
   creditlink: 
 ---
 
+Swift is turning 4 this month. With each new release, the language changes and definitely becomes more enjoyable to program in. I first wanted to write a post examining what's new in Swift 4 and what to expect in the next version of this young language.
 
-Swift is turning 4 this month. I want to briefly tell it's story and take a look forward for what is likely coming in Swift 5.0.
+I had to stop myself while researching this topic and acknowledge that so much of the context for where is are with Swift is based on it's history to date. On Swift's 4th birthday, I'd like to look back at _both_ how the language came out and what's in store for the latest version and beyond.
 
+### Swift's Origins
 
-Apple began creating the Swift programming language for many of these complaints. And others.
+#### Child of the LLVM compiler
 
-To name a few.
+Swift came about as direct result of Apple's adoption and advancement of the LLVM compiler. Understanding why Swift was started requires understanding how the LLVM came about.
 
+The LLVM compiler project was started at the University of Illinois by Chris Lattner and Vikram Adve. Lattner caught Apple's eye with the project and hired him to bring his project and it's development in-house. It was advanced and over time became integral to Apple's development toolset. 
 
---- Before diving into the history, I want to first share the story of how Swift got started. ---
-
-In 2010 LLVM reached a point where it could support more features than could be added to Objective C. Chris Lattner (behind LLBM & Swift) began working on Swift at this point.
-
-Apple's free iBook on Swift also notes that "Swift has been years in the making," adding that "Apple laid the foundation for Swift by advancing our existing compiler, debugger, and framework infrastructure. 
+The benefits brought by the LLVM had allowed Apple to progress Objective C and it's framework stack.
 
 "We simplified memory management with Automatic Reference Counting (ARC). Our framework stack, built on the solid base of Foundation and Cocoa, has been modernized and standardized throughout. Objective-C itself has evolved to support blocks, collection literals, and modules, enabling framework adoption of modern language technologies without disruption. Thanks to this groundwork, we can now introduce a new language for the future of Apple software development."
 
---- Let's imagine the new features that were desired for Obj-C but perhaps not possible.. and that thus were the promise made in creating Swift ---
+Apple's iBook on Swift notes that Apple "laid the foundation for Swift by advancing our existing compiler, debugger, and framework infrastructure".
+
+#### 2010 - LLVM progresses past where Obj-C can utilize advancements.
+
+In 2010 LLVM reached a point where it could support more features than could be added to Objective C. Lattner apparently began working on Swift at this point.
+
+### Beyond Objective-C
+
+It's interesting to imagine what features the LLVM had that couldn't be taken advantage of by Obj-C. I'm not going to delve into that but will instead look at the earlier, wider improvements promised by Swift.
 
 1. Crashes.
 
@@ -73,6 +80,7 @@ Swift 1.0
 Goals: 
 - Integrating with iOS libraries. Ex. IBOutlets.
 - Basic language
+- Generics, optionals
 
 Issues:
 
