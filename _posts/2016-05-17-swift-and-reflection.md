@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Functional programming - currying
-description: "Vindaloo?? Not quite. Currying is a feature you get in functional languages that can obfuscate.. but provide power. It should be used with care."
+description: "What it is"
 modified: 2016-07-29
 tags: [Swift, Functional]
 image:

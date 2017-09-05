@@ -12,66 +12,53 @@ image:
 
 Swift is turning 4 this month. With each new release, the language changes and definitely becomes more enjoyable to program in. I first wanted to write a post examining what's new in Swift 4 and what to expect in the next version of this young language.
 
-I had to stop myself while researching this topic and acknowledge that so much of the context for where is are with Swift is based on it's history to date. On Swift's 4th birthday, I'd like to look back at _both_ how the language came out and what's in store for the latest version and beyond.
+I had to stop myself while researching this topic and acknowledge that so much of the context for where we are with Swift is based on it's history to date. On Swift's 4th birthday, I'd like to look back at _both_ how the language came to be what it is today and what's in store for the latest version and beyond.
 
-### Swift's Origins
+## Swift's Origins
 
-#### Child of the LLVM compiler
+### Child of the LLVM compiler
 
 Swift came about as direct result of Apple's adoption and advancement of the LLVM compiler. Understanding why Swift was started requires understanding how the LLVM came about.
 
-The LLVM compiler project was started at the University of Illinois by Chris Lattner and Vikram Adve. Lattner caught Apple's eye with the project and hired him to bring his project and it's development in-house. It was advanced and over time became integral to Apple's development toolset. 
+It's a really fascinating story!
 
-The benefits brought by the LLVM had allowed Apple to progress Objective C and it's framework stack.
+#### LLVM project begins
+
+The LLVM compiler project was started at the University of Illinois by Chris Lattner and Vikram Adve. It was originally implemented to compile C & C++, but was created with a 'language-agnostic' design in mind... this caught the eye of Apple they Lattner to bring his project and it's development in-house. It was advanced and over time became integral to Apple's development toolset. 
+
+The benefits brought by the LLVM allowed Apple to progress Objective C and it's development toolset.
+
+In 2010 LLVM reached a point where it could support more features than could be added to Objective C. Lattner apparently began working on Swift at this point. The framework laid by the advancements to the LLVM, Obj-C and Apple toolset seem to have been foundational in the direction Swift would go.
 
 "We simplified memory management with Automatic Reference Counting (ARC). Our framework stack, built on the solid base of Foundation and Cocoa, has been modernized and standardized throughout. Objective-C itself has evolved to support blocks, collection literals, and modules, enabling framework adoption of modern language technologies without disruption. Thanks to this groundwork, we can now introduce a new language for the future of Apple software development."
+-- Chris Lattener
 
-Apple's iBook on Swift notes that Apple "laid the foundation for Swift by advancing our existing compiler, debugger, and framework infrastructure".
+#### Beyond Objective-C
 
-#### 2010 - LLVM progresses past where Obj-C can utilize advancements.
+It does really seem like the advancements made in the last stages of Obj-C development were tightly coupled to advancements in the LLVM... but left things imperfect, bulky and awkward. 
 
-In 2010 LLVM reached a point where it could support more features than could be added to Objective C. Lattner apparently began working on Swift at this point.
+Example: ARC
 
-### Beyond Objective-C
+ARC (automatic reference counting) is really a feature of the LLVM's Clang compiler. At the time ARC was introduced, Obj-C had to be modified to take advantage of it. Developers were still required to instruct the compiler on what type of memory management to apply to different variables. And crashes could (and did) occur if you got it wrong!
 
-It's interesting to imagine what features the LLVM had that couldn't be taken advantage of by Obj-C. I'm not going to delve into that but will instead look at the earlier, wider improvements promised by Swift.
+This is a great example of how the advancements of the LLVM laid the framework for Swift. Swift uses ARC, but was designed to drastically simplify the developers interaction with it.
 
-1. Crashes.
+### Big Wins with Swift
+
+With the context of understanding Swift was designed to take full advantage of the latest LLVM advancements. Let's look at a few of the things we got
+
+1. Safer
 
 - Optionals
 
-2. New developer ramp up.
+2. New developer ramp up. Junior developer
 
  - Playgrounds
  - Syntax
 
- "Playgrounds were heavily influenced by Bret Victor's ideas [which are cited as a inspiration for Khan Academy's online environment for learning to program], by Light Table [an open source IDE designed to provide realtime feedback about code and how programs work] and by many other interactive systems. ""
-
- - Chris Lattner
-
- Apple is committed to changing the game here. Playgrounds has come far is now available on iPad.
-
-3. Language perks. Generics. Reflection.
+3. Language perks. Generics. 
 
 
-Swift Development Challenges
-
-1. Fitting into existing platform
-
-The challenge is when you put the language into developers hands for use.. who are then using it in the current format. If you change syntax or API. Things break. (Anyone who experienced Swift 2 -> Swift 3 knows.)
-
-2. Speed
-
-Swift developed as a language that could take more advantage of the LLVM.
-
-2. Ongoing theme: 
-
-
-
-Swift Development Components
-(What are the different parts of the language getting developed)
-
-Foundation
 
 
 
