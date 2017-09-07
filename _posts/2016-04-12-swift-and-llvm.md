@@ -5,7 +5,7 @@ description: "First in the series of 'Understanding Swift'.. diving into it's or
 modified: 2016-05-10
 tags: [Grow, iOS, Hardware]
 image:
-  feature:
+  feature: LLVM_Logo.png
   credit: 
   creditlink: 
 ---
@@ -16,27 +16,46 @@ You can review what's planned in [the upcoming releases](https://github.com/appl
 
 I'd like to make this the first in a series on the technologies around Swift and how they both drive the development of the language and are impacted by it.
 
-This post will be on the [LLVM](https://llvm.org/) who, oddly, has very little to do with being a virtual machine.. but a great deal to do with the Swift programming language!
+This post will be on the [LLVM](https://llvm.org/) which, oddly, has very little to do with being a virtual machine.. but a great deal to do with the Swift programming language!
 
 ## What is the LLVM
-
-{% capture images %}
-	/images/llvm/LLVM_Logo.png
-{% endcapture %}
-{% include gallery images=images cols=2 caption="The LLVM Project - has kind of an indimidating logo?"%}
 
 LLVM is actually an umbrella project for many subprojects. All of which result in a compiler infrastructure and tool chain used today largely by developers using C/C++ based languages.
 
 ### A Compilation Tool Chain
 
-Any set of compilation tools (such as the LLVM and it's sub-projects) follow the same flow for compiling source code to machine code and then handing the result off to a process for linking and generating an executable. 
+Any set of compilation tools (such as the LLVM and it's sub-projects) follow a similar flow for compiling source code to machine code and then handing the result off to a process for linking and generating an executable. 
 
 {% capture images %}
 	/images/llvm/toolchain-compilation-flow.png
 {% endcapture %}
 {% include gallery images=images cols=1 %}
 
-#### Within LLVM, what are the major pieces of this tool chain?
+We're going to dive further into these pieces as they relate to iOS/OSX development. Before we do that...
+
+## Apple & LLVM
+
+The LLVM compiler project was not started at Apple but University of Illinois by Chris Lattner (that guy) and a professor there, Vikram Adve. 
+
+It was originally implemented to compile C & C++, but was created with a 'language-agnostic' design in mind... this caught the eye of Apple they brought Lattner, his project and it's development in-house in 2005. Though it appears it was not immediately invested in, Lattner spent his own time advancing the project until he was able to demonstrate it's value and convince Apple to invest a team in it. It was further advanced and over time became integral to Apple's development toolset... slowly replacing the previously used GCC compiler and many of the low-level tools Apple used across it's development.
+
+The benefits brought by the LLVM allowed Apple to progress Objective C and Xcode and much of the performance and potential of their low-level tools.
+
+In 2010, it seems the LLVM reached a point where it could support more features than could be added to Objective C. Lattner apparently began working on Swift at this point. The framework laid by the advancements to the LLVM, Obj-C and Apple toolset seem to have been foundational in the direction Swift would go.
+
+"We simplified memory management with Automatic Reference Counting (ARC). Our framework stack, built on the solid base of Foundation and Cocoa, has been modernized and standardized throughout. Objective-C itself has evolved to support blocks, collection literals, and modules, enabling framework adoption of modern language technologies without disruption. Thanks to this groundwork, we can now introduce a new language for the future of Apple software development."
+-- Chris Lattener
+
+{% capture images %}
+	/images/llvm/LLVM-apple-history.png
+{% endcapture %}
+{% include gallery images=images cols=1 caption="Timeline of LLVM history at Apple"%}
+
+### The Clang Model
+
+Clang was developed to be LLVM's go-to frontend compiler.. including support for Obj-C. This allowed Objective-C to be be progressed to where Apple had taken it in the years following it's adoption.
+
+And in the interrim years
 
 _Frontend_
 
@@ -64,16 +83,6 @@ It's a really fascinating story!
 
 #### The LLVM project begins
 
-The LLVM compiler project was started at the University of Illinois by Chris Lattner and Vikram Adve. It was originally implemented to compile C & C++, but was created with a 'language-agnostic' design in mind... this caught the eye of Apple they Lattner to bring his project and it's development in-house. It was advanced and over time has became integral to Apple's development toolset. 
-
-They originally used the gcc compiler.. but this is now totally (I believe) phased out.
-
-The benefits brought by the LLVM allowed Apple to progress Objective C and it's development toolset.
-
-In 2010 LLVM reached a point where it could support more features than could be added to Objective C. Lattner apparently began working on Swift at this point. The framework laid by the advancements to the LLVM, Obj-C and Apple toolset seem to have been foundational in the direction Swift would go.
-
-"We simplified memory management with Automatic Reference Counting (ARC). Our framework stack, built on the solid base of Foundation and Cocoa, has been modernized and standardized throughout. Objective-C itself has evolved to support blocks, collection literals, and modules, enabling framework adoption of modern language technologies without disruption. Thanks to this groundwork, we can now introduce a new language for the future of Apple software development."
--- Chris Lattener
 
 #### Beyond Objective-C
 
