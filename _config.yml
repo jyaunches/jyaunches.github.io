@@ -55,9 +55,6 @@ sass:
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /:categories/:title/
 
-# Amount of post to show on home page
-paginate: 5
-
 collections:
   speaking:
     output: true
