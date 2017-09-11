@@ -6,10 +6,7 @@ modified: 2013-09-17
 location: "Brooklyn iOS Meetup, NYC"
 tags: [iOS, Obj-C]
 event_link: https://www.meetup.com/The-Brooklyn-iPhone-and-iPad-Developer-Meetup/events/138137442/
-image:
-  feature:
-  credit: 
-  creditlink: 
+speaking_image: brooklyn-ios-self-taught.png
 ---
 
 
