@@ -6,10 +6,6 @@ modified: 2017-06-20
 location: "Brooklyn Swift Meetup, NYC"
 tags: [iOS, Swift, WWDC]
 event_link: https://www.meetup.com/Brooklyn-Swift-Developers/events/240721410/
-image:
-  feature: speaking/wwdc-2017.jpg
-  credit: 
-  creditlink: https://www.meetup.com/Brooklyn-Swift-Developers/events/240721410/
 ---
 
 WWDC this year was very exciting! Lots of new developments have come out.

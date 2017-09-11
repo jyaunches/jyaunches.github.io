@@ -6,10 +6,7 @@ modified: 2017-03-22
 location: "Women in iOS (iOSoho) Meetup, NYC"
 tags: [iOS, Hardware, Swift]
 event_link: https://www.meetup.com/iOSoho/events/236799040/
-image:
-  feature:
-  credit: 
-  creditlink: 
+speaking_image: iosoho-women-in-dev-hardware-speaking.jpeg 
 ---
 
 

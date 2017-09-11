@@ -6,10 +6,6 @@ modified: 2014-05-10
 location: "Brooklyn iOS Meetup, NYC"
 tags: [iOS, Obj-C, TDD]
 event_link: https://www.meetup.com/The-Brooklyn-iPhone-and-iPad-Developer-Meetup/events/181488212/?eventId=181488212&chapter_analytics_code=UA-7219104-3
-image:
-  feature:
-  credit: 
-  creditlink: 
 ---
 
 
