@@ -5,6 +5,7 @@ description: "Moderated panel discussing latest announcements out of WWDC. MLKit
 modified: 2017-06-20
 location: "Brooklyn Swift Meetup, NYC"
 tags: [iOS, Swift, WWDC]
+event_link: https://www.meetup.com/Brooklyn-Swift-Developers/events/240721410/
 image:
   feature: speaking/wwdc-2017.jpg
   credit: 

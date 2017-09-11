@@ -11,9 +11,15 @@ image:
    
       
 {% for post in site.speaking reversed %}
-<article>       
+<article> 
+<h2><a href="{{ post.event_link }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+
+{% capture images %}
+	/images/hardware_and_visibility/Planter_Toms.png	
+{% endcapture %}
+{% include gallery images=images cols=2 %}      
     
-        <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+        
 
         <h3>{{ post.location }}</h3>
         <p class="entry-title">{{ post.date | date: "%B %d, %Y" }}</p>
