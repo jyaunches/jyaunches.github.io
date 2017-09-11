@@ -3,6 +3,7 @@ layout: speaking
 title: Brooklyn Swift - WWDC Panel 2017
 description: "Moderated panel discussing latest announcements out of WWDC. MLKit, ARKit, Xcode improvements, Swift 4."
 modified: 2017-06-20
+location: "Brooklyn Swift Meetup, NYC"
 tags: [iOS, Swift, WWDC]
 image:
   feature: speaking/wwdc-2017.jpg
