@@ -12,17 +12,19 @@ image:
       
 {% for post in site.speaking reversed %}
 <article> 
-<h2><a href="{{ post.event_link }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+	<h2><a href="{{ post.event_link }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+	<h3>{{ post.location }} - {{ post.date | date: "%B %d, %Y" }}</h3>
+	<p class="entry-title">{{ post.content }}</p>
 
-{% capture images %}
-	/images/speaking/{{post.speaking_image}}
-{% endcapture %}
-{% include gallery images=images cols=2 %}      
-    
-        
+	{% if post.video_link %}
+		<iframe id="ls_embed_1506037354" src={{post.video_link}} width="640" height="360" frameborder="0" scrolling="no" allowfullscreen webkitallowfullscreen mozallowfullscreen> </iframe>	
+	{% else %}
+		{% capture images %}
+			/images/speaking/{{post.speaking_image}}
+		{% endcapture %}
+		{% include gallery images=images cols=1 %}                  
+	{% endif %}
 
-        <h3>{{ post.location }}</h3>
-        <p class="entry-title">{{ post.date | date: "%B %d, %Y" }}</p>
 </article>
  {% endfor %}   
       

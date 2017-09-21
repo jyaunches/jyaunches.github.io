@@ -8,7 +8,7 @@ tags: [iOS, Obj-C, TDD]
 event_link: https://www.meetup.com/The-Brooklyn-iPhone-and-iPad-Developer-Meetup/events/181488212/?eventId=181488212&chapter_analytics_code=UA-7219104-3
 ---
 
-
+Working on a shared code base? Have issues maintaining code quality and consistency? TDD can help you get this under control. And it's easier than ever in iOS. This talk looks at the strategies and tools you can use in either introducing TDD or propagating it more thoroughly throughout your iOS team.
 
 
 
