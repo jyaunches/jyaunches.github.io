@@ -3,9 +3,9 @@ layout: post
 title: Understanding The LLVM - Introduction
 description: "First in the series of 'Understanding The LLVM'.. diving into Swift's compilation tool chain"
 modified: 2017-06-18
-tags: [LLVM]
+tags: [LLVM, Series]
 image:
-  feature: LLVM_Logo.png
+  feature: llvm/LLVM_Logo.png
   credit: 
   creditlink: 
 ---

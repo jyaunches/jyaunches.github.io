@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Story of Swift
+title: Swift - Child of LLVM
 description: "Perhaps the most rapidly adopted programming language in history.. What's next?"
 modified: 2016-05-10
 tags: [Grow, iOS, Hardware]
@@ -10,32 +10,48 @@ image:
   creditlink: 
 ---
 
-Swift is turning 4 this month. With each new release, the language changes and definitely becomes more enjoyable to program in. I first wanted to write a post examining what's new in Swift 4 and what to expect in the next version of this young language.
+This post is the second in a series on the LLVM. The first post spoke about the compilation project at a high level, broadly outlining it's history and the reasons Apple adopted and developed.
 
-I had to stop myself while researching this topic and acknowledge that so much of the context for where we are with Swift is based on it's history to date. On Swift's 4th birthday, I'd like to look back at _both_ how the language came to be what it is today and what's in store for the latest version and beyond.
+With this one, I want to look more in depth at how the LLVM enabled Swift to advance beyond Objective-C and what benefits this has brought.
 
-## Swift's Origins
-
-### Child of the LLVM compiler
+### Swift's Origins
 
 Swift came about as direct result of Apple's adoption and advancement of the LLVM compiler. Understanding why Swift was started requires understanding how the LLVM came about.
 
 It's a really fascinating story!
 
-#### LLVM project begins
+### LLVM project review
 
-The LLVM compiler project was started at the University of Illinois by Chris Lattner and Vikram Adve. It was originally implemented to compile C & C++, but was created with a 'language-agnostic' design in mind... this caught the eye of Apple they Lattner to bring his project and it's development in-house. It was advanced and over time became integral to Apple's development toolset. 
+The LLVM compiler project was started by Chris Lattner at the University of Illinois. Apple became interested in it for both it's 'language-agnostic' design but also the potential to more easily compile to many target architectures. 
 
-The benefits brought by the LLVM allowed Apple to progress Objective C and it's development toolset.
+The benefits brought by the LLVM did allow Apple to progress Objective C and it's development toolset. However, in 2010 the LLVM reached a point where it could support more features than could be added to Objective C. This is when development of Swift started.
 
-In 2010 LLVM reached a point where it could support more features than could be added to Objective C. Lattner apparently began working on Swift at this point. The framework laid by the advancements to the LLVM, Obj-C and Apple toolset seem to have been foundational in the direction Swift would go.
+WHAT ARE THESE FEATURES?
 
-"We simplified memory management with Automatic Reference Counting (ARC). Our framework stack, built on the solid base of Foundation and Cocoa, has been modernized and standardized throughout. Objective-C itself has evolved to support blocks, collection literals, and modules, enabling framework adoption of modern language technologies without disruption. Thanks to this groundwork, we can now introduce a new language for the future of Apple software development."
--- Chris Lattener
+### LLVM Advances & Obj-C
 
-#### Beyond Objective-C
+While Apple was adopting the LLVM/Clang and using it to move Obj-C forward we saw the following language improvements:
 
-It does really seem like the advancements made in the last stages of Obj-C development were tightly coupled to advancements in the LLVM... but left things imperfect, bulky and awkward. 
+Modern Language Features
+- support blocks, collection literals, and modules
+
+ARC
+- simplified memory management with Automatic Reference Counting
+
+### Swift - Beyond Objective-C
+
+Swift was invested in not only to piggy-back and continue the advancements of the LLVM toolchain Apple had developed. There were other great reasons to introduce a new more accessible language. New developer ramp-up for one.
+
+But I do want to look at what language features we got in Swift that weren't necessarily possible in Obj-C/Clang/LLVM
+
+#### SIL 
+
+With Swift, the compilation team decided to introduce a new intermediary language to enable to language features. The flexibility of LLVM allowed them to do this and slot it right into the existing compilation flow
+
+{% capture images %}
+	/images/swift-llvm/SIL-in-compilation-flow.png
+{% endcapture %}
+{% include gallery images=images cols=1 %}
 
 Example: ARC
 
@@ -45,7 +61,26 @@ This is a great example of how the advancements of the LLVM laid the framework f
 
 ### Big Wins with Swift
 
-With the context of understanding Swift was designed to take full advantage of the latest LLVM advancements. Let's look at a few of the things we got
+
+Swift - wider gap between source semantics & IR semantics
+
+Writing more of the language in the language
+
+Generic model - support dynamic dispatch & separate compilation instead of being dependent on template instantiation like Obj-C & C++
+
+
+Safer
+
+Uninitialize vars, unreachable code should be compiler errors
+
+
+Swift has it's own intermediary language (SIL).
+
+--> allows for compiler warnings on uninitialize vars, unreachable code should be compiler errors
+
+SIL is still built off LLVM provided primitives.. creating boundary between SIL & LLVM responsibilties.
+
+---------
 
 1. Safer
 
