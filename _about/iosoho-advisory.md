@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Advisory Board - iOSoho
+title: Advisory Board Member
 image: iosoho.jpeg
-image_link: https://www.meetup.com/iOSoho/
+piece_link: https://www.meetup.com/iOSoho/
 ---

@@ -17,15 +17,12 @@ Originally hailing from the midwest of the United States, over the past 12 years
     <div class="thumbnail">
         <a href="{{ project.piece_link }}" target="_blank">
         {% if project.image %}
-        <img class="thumbnail" src="/images/about/{{ project.image }}"/>
-        {% else %}
-        <div class="thumbnail blankbox"></div>
-        {% endif %}    
+        <img class="thumbnail" src="/images/about/{{ project.image }}"/>           
         <span>
-            <h1>{{ project.title }}</h1>
-            <br/>
+            <h2>{{ project.title }}</h2>
             <p>{{ project.description }}</p>
         </span>
+        {% endif %} 
         </a>
     </div>
 </div>

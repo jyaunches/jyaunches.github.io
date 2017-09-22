@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Lead Organizer - Brooklyn Swift
-description: iOS meetup in Brooklyn, NY
+title: Lead Organizer
+description: Brooklyn Swift Meetup
 image: bk-swift-dev-logo.png
-image_link: https://www.meetup.com/Brooklyn-Swift-Developers/
+piece_link: https://www.meetup.com/Brooklyn-Swift-Developers/
 ---

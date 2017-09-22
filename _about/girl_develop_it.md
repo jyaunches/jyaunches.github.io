@@ -1,6 +1,6 @@
 ---
 layout: post
-title: iOS Course Instructor - Girl Develop It
+title: iOS Course Instructor
 image: gdinyc-logo-800x800-1.jpg
-image_link: https://www.meetup.com/girldevelopit/
+piece_link: https://www.meetup.com/girldevelopit/
 ---
