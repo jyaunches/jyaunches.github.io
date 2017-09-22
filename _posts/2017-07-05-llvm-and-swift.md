@@ -29,31 +29,32 @@ The benefits brought by the LLVM did allow Apple to progress Objective C and it'
 
 ## Obj-C
 
+While Apple was adopting the LLVM/Clang and using it to move Obj-C forward we saw significant improvements. Notable were:
+
 __Language Features__
 
-While Apple was adopting the LLVM/Clang and using it to move Obj-C forward we saw significant language improvements. Notable were:
 * support blocks
 * collection literals
 * modules
 
 __ARC__
 
-Also introduced because of LLVM/Clang advancements was simplified memory management with Automatic Reference Counting. Developers were still required to instruct the compiler on what type of memory management to apply to different variables. And crashes could (and did) occur if you got it wrong!
+Automatic Reference Counting was a Clang advancement bringing automatic memory management to Obj-C objects. Developers no longer needed to think about retain and release operations but were required to instruct the compiler on what type of memory management to apply to different variables. Crashes frequently occured if you got it wrong.
 
 ## Swift
 
-Swift was invested in not only to piggy-back and continue the advancements of the LLVM toolchain Apple had developed. There were other great reasons to introduce a new more accessible language. New developer ramp-up for one. But let's look at the features Swift, with it's compilation toolchain work, brought beyond Obj-C.
+A primary motivation for Swift was definitely to piggy-back and continue to utilize the advancements of the LLVM toolchain. It's notable that there also were other great reasons to introduce a new more accessible language. New developer ramp-up for one. Obj-C is not the easiest first progamming language to master. 
 
 Probably feature objectives with Swift development:
 
 {% capture images %}
-	/images/swift-llvm/Swift-language-objectives.png
+	/images/swift-llvm/Swift-language-objectives.jpeg
 {% endcapture %}
 {% include gallery images=images cols=1 %}
 
 ### SIL 
 
-With Swift, the compilation team decided to introduce a new intermediary language to enable to language features. The flexibility of LLVM allowed them to do this and slot it right into the existing compilation flow
+With Swift, the compilation team decided to introduce a new intermediary language to enable both language features and improved compilation. The flexibility of LLVM allowed them to do this and slot it right into the existing compilation flow
 
 {% capture images %}
 	/images/swift-llvm/SIL-in-compilation-flow.png
@@ -64,13 +65,13 @@ A huge source of info on this was a talk given at the 2015 LLVM Developers' Meet
 
 ### SIL Enabled
 
-As stated in the talk linked above, SIL enables wider gap between source (Swift) semantics & IR semantics during compilation. THis has a few notable benefits:
+As stated in the talk linked above, SIL enables a wider gap between source (Swift) semantics & IR semantics during compilation. This has a few notable benefits:
 
-* Enabling of Swift language writers to write more of the language in the language
-* Safety - Allows for compiler errors on things like uninitialize vars and unreachable code
-* Generics
-	* SIL allows for a model that supports dynamic dispatch & separate compilation. This is instead of being dependent on _template instantiation_ like Obj-C & C++. 
-	* In more simpler language.. this speeds up runtime through in-lining of concrete type function definition at compile time.. leaving the impact of generics at runtime basically non-existent. Check out (this page)[https://swift.org/blog/whole-module-optimizations/] on how it's done.
+* Language evolution - SIL allows Swift language writers to write more of the language in the language
+* Safety - SIL allows for compiler errors on things like uninitialize vars and unreachable code
+* Generics - a really interesting example of compilation strategy impacting language features
+	* SIL allows for a generics model that supports dynamic dispatch & separate compilation. This is instead of being dependent on _template instantiation_ like Obj-C & C++... which uses a runtime strategy that can slow execution down.
+	* In more simpler language, dynamic dispatch & separate compilation is a strategy that uses in-lining of concrete type function definition at compile time. This leaves the impact of generics at runtime basically non-existent. Check out (this page)[https://swift.org/blog/whole-module-optimizations/] on how it's done.
 	* FYI this is called function _specialization_. 
 
 ## Summing it Up
