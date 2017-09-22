@@ -18,7 +18,7 @@ image:
 
 	{% if post.video_link %}
 		<iframe id="ls_embed_1506037354" src={{post.video_link}} width="640" height="360" frameborder="0" scrolling="no" allowfullscreen webkitallowfullscreen mozallowfullscreen> </iframe>	
-	{% else %}
+	{% elsif post.speaking_image %}
 		{% capture images %}
 			/images/speaking/{{post.speaking_image}}
 		{% endcapture %}
