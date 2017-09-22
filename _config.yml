@@ -59,6 +59,8 @@ paginate: 5
 collections:
   speaking:
     output: true
+  about:
+    output: true
 
 kramdown:
   auto_ids: true

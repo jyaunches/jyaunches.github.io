@@ -9,8 +9,31 @@ comments: false
 modified: 2015-07-12
 ---
 
-Hi there. To summarize, I'm a totally lover of making things. That includes building awesome/beautiful software. But the maker vibe goes beyond software to carpentry, cooking and gardening.
+Originally hailing from the midwest of the United States, over the past 12 years, I've lived and worked across 4 continents. I now find myself back in the US, working on mobile application platforms for start-ups in NYC. A few other things I do:
 
-My dog is pretty cool. She's a hound mix that loves to go hiking with me and is approaching professional levels in her ball fetching practice. It's really quite impressive.
+### Lead Organizer - Brooklyn Swift Meetup
 
-Originally hailing from the midwest of the United States, over the past 10 years, I've lived and worked across 4 continents. I now find myself back in the US.
+
+{% for project in site.about %}
+
+<div class="project">
+    <div class="thumbnail">
+        <a href="{{ project.piece_link }}" target="_blank">
+        {% if project.image %}
+        <img class="thumbnail" src="/images/about/{{ project.image }}"/>
+        {% else %}
+        <div class="thumbnail blankbox"></div>
+        {% endif %}    
+        <span>
+            <h1>{{ project.title }}</h1>
+            <br/>
+            <p>{{ project.description }}</p>
+        </span>
+        </a>
+    </div>
+</div>
+
+{% endfor %}
+
+
+            
