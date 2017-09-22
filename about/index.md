@@ -11,9 +11,6 @@ modified: 2015-07-12
 
 Originally hailing from the midwest of the United States, over the past 12 years, I've lived and worked across 4 continents. I now find myself back in the US, working on mobile application platforms for start-ups in NYC. A few other things I do:
 
-### Lead Organizer - Brooklyn Swift Meetup
-
-
 {% for project in site.about %}
 
 <div class="project">

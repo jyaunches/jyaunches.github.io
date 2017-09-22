@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Lead Organizer - Brooklyn Swift
-image: bk-swift-dev-logo.png
-image_link: https://www.meetup.com/Brooklyn-Swift-Developers/
+title: iOS Course Instructor - Girl Develop It
+image: gdinyc-logo-800x800-1.jpg
+image_link: https://www.meetup.com/girldevelopit/
 ---
