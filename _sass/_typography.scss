@@ -11,10 +11,23 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: $heading-font;
 }
 h1 {
-	@include font-rem(28);
+	font-size: 3em;
 	@media #{$medium} {
-		@include font-rem(32);
+		font-size: 3.75em;
 	}
+	letter-spacing: 3px;
+	margin: 0.5em 0 0.3em 0;
+}
+h2 {
+	margin-top: 1.8em;
+	font-size: 2em;
+	line-height: 1.4em;
+	letter-spacing: 2px;
+}
+h3 {
+	margin-top: 2em;
+	font-size: 1.3em;
+	letter-spacing: 2px;
 }
 
 // Links
