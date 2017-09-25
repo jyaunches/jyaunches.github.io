@@ -5,7 +5,7 @@ description: "Exploring what Swift achieves on LLVM that Obj-C could not."
 modified: 2017-07-05
 tags: [LLVM, Series, Swift]
 image:
-  feature: 
+  feature: swift-llvm/Swift_and_LLVM.png
   credit: 
   creditlink: 
 ---
