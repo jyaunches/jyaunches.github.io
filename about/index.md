@@ -1,10 +1,6 @@
 ---
 layout: page
 title: About
-image:
-  feature: burning-man-abstract.png
-  credit: 
-  creditlink: 
 comments: false
 modified: 2017-09-22
 ---
