@@ -10,17 +10,18 @@ image:
 ---
    
       
-{% for post in site.speaking reversed %}
+{% for event in site.speaking reversed %}
 <article> 
-	<h2><a href="{{ post.event_link }}" title="{{ post.title }}">{{ post.title }}</a></h2>
-	<h3>{{ post.location }} - {{ post.date | date: "%B %d, %Y" }}</h3>
-	<p class="entry-title">{{ post.content }}</p>
+	{% include speaking-header.html %}
 
-	{% if post.video_link %}
-		<iframe id="ls_embed_1506037354" src={{post.video_link}} width="640" height="360" frameborder="0" scrolling="no" allowfullscreen webkitallowfullscreen mozallowfullscreen> </iframe>	
-	{% elsif post.speaking_image %}
+	<h2>{{ event.location }}</h2>
+	<p class="entry-title">{{ event.content }}</p>
+
+	{% if event.video_link %}
+		<iframe id="ls_embed_1506037354" src={{event.video_link}} width="640" height="360" frameborder="0" scrolling="no" allowfullscreen webkitallowfullscreen mozallowfullscreen> </iframe>	
+	{% elsif event.speaking_image %}
 		{% capture images %}
-			/images/speaking/{{post.speaking_image}}
+			/images/speaking/{{event.speaking_image}}
 		{% endcapture %}
 		{% include gallery images=images cols=1 %}                  
 	{% endif %}

@@ -1,0 +1,11 @@
+
+  <header>
+  	<div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="{{ event.date | date_to_xmlschema }}"><a href="{{ site.url }}{{ event.url }}">{{ event.date | date: "%B %d, %Y" }}</a></time></span>
+  </div>
+    {% if event.link %}
+      <h1 class="entry-title"><a href="{{ event.event_link }}" class="permalink" rel="bookmark" title="{{ event.title }}"><i class="fa fa-bookmark"></i></a> <a href="{{ event.event_link }}">{{ event.title }}</a></h1>
+    {% else %}
+      <h1 class="entry-title"><a href="{{ event.event_link  }}" rel="bookmark" title="{{ event.title }}" itemprop="url">{{ event.title }}</a></h1>
+    {% endif %}
+  </header>
