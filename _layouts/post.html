@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: post-index
 ---
+<article class="hentry">
     <header class="header-title">
       <div class="header-title-wrap">
         {% if page.link %}
@@ -29,3 +30,4 @@ layout: default
     </div><!-- /.entry-content -->
     {% if page.comments != false %}<section id="disqus_thread"></section><!-- /#disqus_thread -->{% endif %}
     {% if site.related_posts.size > 0 %}{% include read-more.html %}{% endif %}
+</article>
