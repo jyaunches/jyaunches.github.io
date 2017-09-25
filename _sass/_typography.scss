@@ -32,23 +32,17 @@ h3 {
 
 // Links
 // --------------------------------------------------
-a { 
+a {
 	text-decoration: none;
-	color: $link-color; 
-	&:visited { 
-		color: lighten($link-color, 20); 
-	}
-	&:hover { 
-		color: darken($link-color, 20); 
-	}
-	&:focus { 
-		outline: thin dotted; 
-		color: darken($link-color, 20);
-	}
-	&:hover, 
-	&:active { 
-		outline: 0; 
-	}
+	color: $link-color;
+}
+
+a:link, a:visited {
+	color: darken($link-color, 20); 
+}
+
+a:hover, a:active {
+	color: red;
 }
 
 .link-arrow {

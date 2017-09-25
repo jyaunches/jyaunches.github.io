@@ -1,0 +1,100 @@
+.header {
+	width: 100%;
+	height: 240px;
+	background-color: #FFFFFF;
+	text-align: center;
+
+	.container {
+		max-width: 1050px;
+		margin: 0 auto;
+		position: relative;
+
+		.menu {
+			display: none;
+		}
+
+		.logo {
+			position: absolute;
+			left: 0;
+			top: 80px;
+			font-family: "Special Elite", serif;
+			font-size: 4em;
+
+			.colored {
+				color: red;
+			}
+		}
+
+		nav {
+			position: absolute;
+			right: 0;
+			top: 80px;
+
+			ul li {
+				list-style-type: none;
+				display: inline-block;
+
+				a {
+					font-size: 1.5em;
+					margin: 0.8em;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1125px) {
+	.header {
+		height: 220px;
+		.container {
+			text-align: center;
+			.logo {
+				margin: 0 auto;
+				position: inherit;
+				top: 40px;
+			}
+
+			nav {
+				position: inherit;
+				top: 68px;
+				ul {
+					padding: 0;
+					width: 570px;
+					margin: 0 auto;
+					li a {
+						font-size: 1.35em;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 570px) {
+	.header {
+		height: 370px;
+		.container {
+			.menu {
+				display: block;
+				position: relative;
+				top: 90px;
+			}
+
+			.logo {
+				font-size: 3em;
+			}
+
+			nav {
+				top: 120px;
+				ul {
+					width: 100%;
+					li {
+						display: block;
+						height: 2.4em;
+					}
+				}
+			}
+		}
+	}
+}
