@@ -14,34 +14,24 @@ This post is the second in a series on the LLVM (Apple's compilation tool chain 
 
 With this article, I want to look more in depth at how the LLVM enabled Swift to advance beyond Objective-C and what benefits this has brought.
 
-## Swift's Origins
-
 Swift came about as direct result of Apple's adoption and advancement of the LLVM compiler. See the [first article](http://yaunch.io/llvm-introduction/) in this series for more details on this. We'll review briefly here for context!
 
-### LLVM project review
+## LLVM project review
 
 The LLVM compiler project was started by Chris Lattner at the University of Illinois. Apple became interested in it for both it's 'language-agnostic' design but also the potential to more easily compile to many target architectures. 
 
 The benefits brought by the LLVM did allow Apple to progress Objective C and it's development toolset. However, in 2010 the LLVM reached a point where it could support more features than could be added to Objective C. This is when development of Swift started.
 
-## LLVM Advances & What Features it Enabled
-
-
-## Obj-C
+## LLVM Advances & Obj-C
 
 While Apple was adopting the LLVM/Clang and using it to move Obj-C forward we saw significant improvements. Notable were:
 
-__Language Features__
+{% capture images %}
+	/images/swift-llvm/obj-language-evolution.png
+{% endcapture %}
+{% include gallery images=images cols=1 %}
 
-* support blocks
-* collection literals
-* modules
-
-__ARC__
-
-Automatic Reference Counting was a Clang advancement bringing automatic memory management to Obj-C objects. Developers no longer needed to think about retain and release operations but were required to instruct the compiler on what type of memory management to apply to different variables. Crashes frequently occured if you got it wrong.
-
-## Swift
+## LLVM Advances & Swift
 
 A primary motivation for Swift was definitely to piggy-back and continue to utilize the advancements of the LLVM toolchain. It's notable that there also were other great reasons to introduce a new more accessible language. New developer ramp-up for one. Obj-C is not the easiest first progamming language to master. 
 
@@ -63,7 +53,7 @@ With Swift, the compilation team decided to introduce a new intermediary languag
 
 A huge source of info on this was a talk given at the 2015 LLVM Developers' Meeting - [Swift's High-Level IR: A Case Study...](https://www.youtube.com/watch?v=Ntj8ab-5cvE). Check this out. It's fascinating.
 
-### SIL Enabled
+### Benefits
 
 As stated in the talk linked above, SIL enables a wider gap between source (Swift) semantics & IR semantics during compilation. This has a few notable benefits:
 
