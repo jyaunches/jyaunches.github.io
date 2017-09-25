@@ -16,7 +16,7 @@ With this article, I want to look more in depth at how the LLVM enabled Swift to
 
 Swift came about as direct result of Apple's adoption and advancement of the LLVM compiler. See the [first article](http://yaunch.io/llvm-introduction/) in this series for more details on this. We'll review briefly here for context!
 
-## LLVM project review
+## LLVM Project
 
 The LLVM compiler project was started by Chris Lattner at the University of Illinois. Apple became interested in it for both it's 'language-agnostic' design but also the potential to more easily compile to many target architectures. 
 
