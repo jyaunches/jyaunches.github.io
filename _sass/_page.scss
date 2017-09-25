@@ -162,7 +162,7 @@ body {
 // --------------------------------------------------
 .entry-meta {
 	@include font-rem(12);
-	text-transform: uppercase;
+	text-transform: uppercase;	
 	color: lighten($base-color,60);
 	a {
 		color: lighten($base-color,60);
@@ -171,7 +171,7 @@ body {
 		&:before {
 			content: " by ";
 		}
-	}
+	}	
 	.tag {
 		display: inline-block;
 		margin: 4px;
@@ -194,7 +194,12 @@ body {
 		float: right;
 	}
 }
-header .entry-meta {
+footer.entry-meta {
+	margin: 80px;
+	text-align: center;
+}
+
+header .entry-meta {	
 	display: none; // hide header meta on small screens
 	@media #{$medium} {
 		display: block;
