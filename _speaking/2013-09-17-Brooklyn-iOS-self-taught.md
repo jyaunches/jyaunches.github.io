@@ -1,5 +1,4 @@
 ---
-layout: speaking
 title: Self Taught
 description: "In this interactive presentation, Julie will tell her story of building GoFest, including technical pitfalls and victories. Through audience participation, she'll construct a guide of self-taught do's and don'ts, then make it available for download post-meetup."
 modified: 2013-09-17

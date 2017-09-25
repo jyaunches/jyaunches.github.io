@@ -1,5 +1,4 @@
 ---
-layout: speaking
 title: Building Apps for Hardware & Planning for Failure
 description: "Need new"
 modified: 2017-04-10

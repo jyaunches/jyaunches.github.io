@@ -1,5 +1,4 @@
 ---
-layout: speaking
 title: WWDC 2017 Panel Moderator
 description: "Moderated panel discussing latest announcements out of WWDC. MLKit, ARKit, Xcode improvements, Swift 4."
 modified: 2017-06-20
