@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Swift Collections & Sequences
-description: "Exploring what Swift achieves on LLVM that Obj-C could not."
-modified: 2017-07-05
-tags: [LLVM, Series, Swift]
+description: ""
+modified: 2016-09-05
+tags: [Swift, Swift Collections]
 image:
-  feature: swift-llvm/Swift_and_LLVM.png
+  feature: 
   credit: 
   creditlink: 
 ---
@@ -78,4 +78,59 @@ Let's look at doing this for a pretty basic data structure, the linked list. So,
 	/images/collection-and-sequence/linked-list.png
 {% endcapture %}
 {% include gallery images=images cols=1 caption="You know when you've reached the end because the reference to next is nil"%}
+
+Fundamentally, to implement a linked list, you're going to need a representation of a link and something to represent the list. If we want to add Sequence type functionality... we'll create both those classes as we would typically, but the list itself needs to implement both the Sequence and IteratorProtocol protocols. All we need to implement here is the next() function.
+
+{% highlight swift %}
+
+class Link<T> {
+    let value: T
+    let nextLink: Link<T>?
+    
+    init(_ value: T, next: Link<T>?){
+        self.value = value
+        self.nextLink = next
+    }
+}
+
+class LinkedLink<T> : Sequence, IteratorProtocol {
+    var currentNode : Link<T>?
+    
+    init(head: Link<T>) {
+        currentNode = head
+    }
+    
+    func next() -> T? {
+        if let next = currentNode?.nextLink {
+            currentNode = next
+            return next.value
+        }
+        return nil
+    }
+}
+
+let elementFour = Link(4, next: nil)
+let elementThree = Link(3, next: elementFour)
+let elementTwo = Link(2, next: elementThree)
+let elementOne = Link(1, next: elementTwo)
+
+let linkedList = LinkedLink(head: elementOne)
+
+for item in linkedList {
+    print(item)
+}
+
+// prints 2
+// prints 3
+// prints 4
+
+linkedList.contains(2)  //true
+
+{% endhighlight %}
+
+Notably, with this linked list example.. we don't get the first element, or the head, printed. This is down to the fact that our implementation of next(), when called for the first time returns the second link.. which we then print. This could be solved by introducing a subclass of Link to represent the head and then to instantiate the LinkedList with this.
+
+### Summing it Up
+
+So, the Sequence protocol is pretty simple and easy to add to a custom collection object. It brings a suite of great functions for your use. What you're essentially setting up when you implement the Sequence and IteratorProtocol protocols is the instruction for  enumeration.. which is the functionality at the core of all functions provided by Sequence. Well done Swift writers!
 

@@ -35,6 +35,8 @@ for item in linkedList {
     print(item)
 }
 
+linkedList.contains(2)
+
 
 
 
