@@ -1,7 +1,7 @@
 ---
 title: 'Developing for Hardware & Visibility'
 subtitle: "When you're app is your gateway..."
-date: 2016-05-10
+date: 2017-05-24
 tags: [Grow, iOS, Hardware]
 featured_image: '/images/hardware_and_visibility/grow-prototype-1.jpg' 
 ---

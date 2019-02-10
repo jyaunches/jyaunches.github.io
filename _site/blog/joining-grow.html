@@ -20,19 +20,19 @@
 
 	<!-- Page Info -->
 	<link rel="shortcut icon" href="/images/favicon.png">
-	<title>Demo Project – Julietta Yaunches</title>
-	<meta name="description" content="This page is a demo that shows everything you can do inside portfolio and blog posts.">
+	<title>Back to Hardware – Julietta Yaunches</title>
+	<meta name="description" content="Joining early-stage hardware start-up, Grow">
 
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="Demo Project – Julietta Yaunches">
-	<meta name="twitter:description" content="This page is a demo that shows everything you can do inside portfolio and blog posts.">
-	<meta name="twitter:image:src" content="http://localhost:4000/images/demo/demo-square.jpg">
+	<meta name="twitter:title" content="Back to Hardware – Julietta Yaunches">
+	<meta name="twitter:description" content="Joining early-stage hardware start-up, Grow">
+	<meta name="twitter:image:src" content="http://localhost:4000/images/joining-grow/grow-blog-header.png'">
 
 	<!-- Facebook OpenGraph -->
-	<meta property="og:title" content="Demo Project – Julietta Yaunches" />
-	<meta property="og:description" content="This page is a demo that shows everything you can do inside portfolio and blog posts." />
-	<meta property="og:image" content="http://localhost:4000/images/demo/demo-square.jpg" />
+	<meta property="og:title" content="Back to Hardware – Julietta Yaunches" />
+	<meta property="og:description" content="Joining early-stage hardware start-up, Grow" />
+	<meta property="og:image" content="http://localhost:4000/images/joining-grow/grow-blog-header.png'" />
 
 	
 	<!-- Font Embed Code -->
@@ -66,7 +66,7 @@
 </head>
 
 
-<body class="loading ajax-loading" data-site-url="http://localhost:4000" data-page-url="/project/demo-project">
+<body class="loading ajax-loading" data-site-url="http://localhost:4000" data-page-url="/blog/joining-grow">
 
 
 	<header class="header">
@@ -124,7 +124,7 @@
 				</li>
 				
 				<li class="menu__list__item">
-					<a href="/project/demo-project" class="menu__list__item__link">Demo Project</a>
+					<a href="/project/rewrite-versus-refactor" class="menu__list__item__link">Technology Roadmap: Rewrite vs Refactor</a>
 				</li>
 				
 			</ul>
@@ -207,14 +207,14 @@
 	
 	<div class="page">
 
-		<div class="page__content" data-page-title="Demo Project – Julietta Yaunches">
+		<div class="page__content" data-page-title="Back to Hardware – Julietta Yaunches">
 
 			<section class="intro">
 
 	<div class="wrap">
 
-		<h1>Demo Project</h1>
-		<p>This is a demo</p>
+		<h1>Back to Hardware</h1>
+		<p>08 June 2016</p>
 
 	</div>
 
@@ -224,93 +224,33 @@
 
 	<div class="wrap">
 
-		<p><img src="/images/demo/demo-landscape.jpg" alt="" /></p>
+		<p>I recently joined early-stage hardware start-up Grow, heading up their software engineering. This is a super exciting opportunity and a chance to work on a technically very interesting product. What does my role as Head of Software Engineering mean for a hardware start-up? It’s probably going to be mean a lot of things. At a high level, I’ll be driving the engineering practice and building out the initial engineering team.</p>
 
-<h2 id="demo-content">Demo content</h2>
+<p>Because we’re building a connected device and a mobile-first experience to interact with said device, the software team will build mobile apps and the cloud infrastructure to support them.</p>
 
-<p>This page is a demo that shows everything you can do inside portfolio and blog posts.</p>
+<p>So, what is this device? Grow is building a outdoor-based automated growing system. What does this mean? The vision is a box that you can plant vegetables in and not have to stay on top of of complex schedule of caring for them. They are watered on a schedule designed for the species and current stage of life of the the plant. There’s an app you use to monitor progress remotely… and let you know about tasks you do need to do such as pruning, harvesting, etc.</p>
 
-<p>We’ve included everything you need to create engaging posts about your work, and show off your case studies in a beautiful way.</p>
+<p>Here’s are some pictures of our first prototype.</p>
 
-<p><strong>Obviously,</strong> we’ve styled up <em>all the basic</em> text formatting options <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">available in markdown</a>.</p>
+<h3 id="grow-prototype---box--board">Grow Prototype - Box &amp; Board</h3>
 
-<p>You can create lists:</p>
+<div class="gallery" data-columns="2">
+	<img src="/images/joining-grow/grow-prototype-1.jpg" />
+	<img src="/images/joining-grow/grow-board-prototype.jpg" />
+</div>
 
-<ul>
-  <li>Simple bulleted lists</li>
-  <li>Like this one</li>
-  <li>Are cool</li>
-</ul>
-
-<p>And:</p>
+<p>Software wise, there a lot of really interesting problems to solve.</p>
 
 <ol>
-  <li>Numbered lists</li>
-  <li>Like this other one</li>
-  <li>Are great too</li>
+  <li>Data retrieval from the bed. If we’re taking care of your plant, we need to pull relatively recent data from it giving us a picture of what’s happening. Soil moisture levels, temperature, etc.. How do we get this data? (Bluetooth, Cellular, Wifi?)</li>
+  <li>Handling gardens with n number of beds.. i.e. scaling.</li>
+  <li>Dynamic watering programs. Customizing the behavior of each bed to what is planted in it and it’s needs.</li>
+  <li>Data capture/analysis of what’s getting grown successfully and funneling this learning back into product/software design.</li>
+  <li>Early stage validations of hardware components. (Lab testing)</li>
+  <li>Effective user testing. What do we put in front of users first? What do we need to capture when we do this.</li>
 </ol>
 
-<p>You can also add blockquotes, which are shown at a larger width to help break up the layout and draw attention to key parts of your content:</p>
-
-<blockquote>
-  <p>“Simple can be harder than complex: You have to work hard to get your thinking clean to make it simple. But it’s worth it in the end because once you get there, you can move mountains.”</p>
-</blockquote>
-
-<p>You can throw in some horizontal rules too:</p>
-
-<hr />
-
-<h3 id="image-galleries">Image galleries</h3>
-
-<p>Here’s a really neat custom feature we added – galleries:</p>
-
-<div class="gallery" data-columns="3">
-	<img src="/images/demo/demo-portrait.jpg" />
-	<img src="/images/demo/demo-landscape.jpg" />
-	<img src="/images/demo/demo-square.jpg" />
-	<img src="/images/demo/demo-landscape-2.jpg" />
-</div>
-
-<p>Inspired by the Galleries feature from WordPress, we’ve made it easy to create grid layouts for your images. Just use a bit of simple HTML in your post to create a masonry grid image layout:</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"gallery"</span> <span class="na">data-columns=</span><span class="s">"3"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/images/demo/demo-portrait.jpg"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/images/demo/demo-landscape.jpg"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/images/demo/demo-square.jpg"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/images/demo/demo-landscape-2.jpg"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre></div></div>
-
-<p><em>See what we did there? Code and syntax highlighting is built-in too!</em></p>
-
-<p>Change the number inside the ‘columns’ setting to create different types of gallery for all kinds of purposes. You can even click on each image to seamlessly enlarge it on the page.</p>
-
-<hr />
-
-<h3 id="image-carousels">Image carousels</h3>
-
-<p>Here’s another gallery with only one column, which creates a carousel slide-show instead.</p>
-
-<p>A nice little feature: the carousel only advances when it is in view, so your visitors won’t scroll down to find it half way through your images.</p>
-
-<div class="gallery" data-columns="1">
-	<img src="/images/demo/demo-landscape.jpg" />
-	<img src="/images/demo/demo-landscape-2.jpg" />
-</div>
-
-<h3 id="what-about-videos">What about videos?</h3>
-
-<p>Videos are an awesome way to show off your work in a more engaging and personal way, and we’ve made sure they work great on our themes. Just paste an embed code from YouTube or Vimeo, and the theme makes sure it displays perfectly:</p>
-
-<iframe src="https://player.vimeo.com/video/19536258?color=ffffff&amp;title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-
-<hr />
-
-<h2 id="pretty-cool-huh">Pretty cool, huh?</h2>
-
-<p>We’ve packed this theme with powerful features to show off your work. Why not put them to use on your new portfolio?</p>
-
-<p><a href="https://jekyllthemes.io/theme/index-portfolio-jekyll-theme" class="button button--large">Get This Theme</a></p>
+<p>I’m super excited to be stepping into a pure leadership role and the challenges that come with that as well!</p>
 
 
 	</div>
