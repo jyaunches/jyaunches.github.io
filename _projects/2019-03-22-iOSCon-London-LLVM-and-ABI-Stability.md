@@ -3,7 +3,7 @@ title: 'iOSCon Lightning Talk - March 2019'
 subtitle: "Presenting: 'ABI Stability & the LLVM'"
 date: 2019-02-05 00:00:00
 description: Discover how ABI stability is part of the maturing process of any compiled language, and consider its goals & limits in relation to Swift.
-featured_image: '/images/iOSCon/iOSCon.jpg'
+featured_image: '/images/iOSCon/ioscon-banner.jpg'
 ---
 
 ![](/images/iOSCon/llvm-abi-twitter-grab.png)

@@ -6,5 +6,4 @@ description: Brooklyn Swift March 2019 event
 featured_image: '/images/brooklyn-swift/bk-swift-dev-logo.png'
 ---
 
-
 More info coming soon!
