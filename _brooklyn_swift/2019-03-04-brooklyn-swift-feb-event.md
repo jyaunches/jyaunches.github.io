@@ -6,7 +6,7 @@ description: Swift community meetup event on MVVM from two speakers, Bryan Oltma
 featured_image: '/images/brooklyn-swift/feb-event/P1010117.jpg'
 ---
 
-
+### Swift community meetup event on MVVM from two speakers, Bryan Oltman & Dean Silfen.
 
 <a href="https://www.meetup.com/Brooklyn-Swift-Developers/events/258251794/">Meetup Page</a>
 
