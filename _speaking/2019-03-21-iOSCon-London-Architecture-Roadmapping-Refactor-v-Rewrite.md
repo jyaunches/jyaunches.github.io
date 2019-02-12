@@ -6,7 +6,7 @@ description: Presenting at iOSCon on topic of decision making around when to ref
 featured_image: '/images/speaking/iOSCon/iOSCon.jpg'
 ---
 
-![](/images/iOSCon/speaking/twitter-post-grab.png)
+![](/images/speaking/iOSCon/twitter-post-grab.png)
 
 ## iOSCon & Skills Matter
 

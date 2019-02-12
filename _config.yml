@@ -13,9 +13,6 @@ collections:
   speaking:
     output: true
     permalink: /speaking/:slug
-  about:
-    output: true
-    permalink: /about/:slug
   brooklyn_swift:
     output: true
     permalink: /brooklyn_swift/:slug
