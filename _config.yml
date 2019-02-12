@@ -10,6 +10,9 @@ collections:
   projects:
     output: true
     permalink: /project/:slug
+  speaking:
+    output: true
+    permalink: /speaking/:slug
   about:
     output: true
     permalink: /about/:slug
@@ -39,6 +42,12 @@ defaults:
     scope:
       path: ""
       type: "projects"
+    values:
+      layout: "project"
+  -
+    scope:
+      path: ""
+      type: "speaking"
     values:
       layout: "project"
 
