@@ -9,7 +9,7 @@ featured_image: /images/brooklyn-swift/logo-header.png
 
 ## Brooklyn Swift
 
-Active in the iOS community since 2012, Julie took over leading the Brooklyn Swift meetup in 2017 and has been organizing monthly events, enabling networking and knowledge share among local iOS & Swift engineers.
+Active in the iOS community since 2012, Julie runs the Brooklyn Swift meetup where sha has organized monthly events and enabled networking and knowledge share among local iOS & Swift engineers since 2016.
 
 ### Recent & Upcoming Events
 
