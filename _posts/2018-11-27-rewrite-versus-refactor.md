@@ -1,5 +1,6 @@
 ---
 title: 'Technology Roadmap: Rewrite vs Refactor'
+subtitle: Article
 date: 2018-11-27
 description: Making the decision to rewrite a codebase should be based on business short and long term needs.
 featured_image: '/images/refactor-vs-rewrite/roadmap.jpeg'

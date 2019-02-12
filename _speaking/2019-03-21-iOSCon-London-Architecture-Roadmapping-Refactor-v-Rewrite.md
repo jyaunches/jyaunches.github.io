@@ -3,10 +3,10 @@ title: 'iOSCon Speaker - March 2019'
 subtitle: "Presenting: 'Architecture Roadmapping: Refactor vs. Rewrite'"
 date: 2019-02-05 00:00:00
 description: Presenting at iOSCon on topic of decision making around when to refactor & when to rewrite your iOS codebase.
-featured_image: '/images/iOSCon/iOSCon.jpg'
+featured_image: '/images/speaking/iOSCon/iOSCon.jpg'
 ---
 
-![](/images/iOSCon/twitter-post-grab.png)
+![](/images/iOSCon/speaking/twitter-post-grab.png)
 
 ## iOSCon & Skills Matter
 
