@@ -237,35 +237,36 @@
 <h3 id="what-does-it-mean-to-have-flexible-tech">What does it mean to have flexible tech?</h3>
 
 <p>Flexible technology means that codebases within the tech stack and the overall ecosystem have the capability to be changed. This change could include:</p>
+
 <ul>
   <li>Changing a data model</li>
   <li>Introducing a new component or service</li>
   <li>Adding un-anticipated user features</li>
 </ul>
 
-<p>The ideal situation is to have flexbility across your entire technical ecosystem. If this is not the current state of things (which it frequently isn’t!), there can be a targeted analysis of where flexibility needs to be increased to drive more experimentation.</p>
+<p>The ideal situation is to have flexibility across your entire technical ecosystem. If this is not the current state of things (which it frequently isn’t!), there can be a targeted analysis of where flexibility needs to be increased to drive more experimentation.</p>
 
-<h3 id="making-decisions-with-flexbility-in-mind">Making decisions with flexbility in mind.</h3>
+<h3 id="making-decisions-with-flexibility-in-mind">Making decisions with flexibility in mind.</h3>
 
 <p>A tech stack and the codebases within one are an evolving landscape. The current state being a culmination of the technical choices that have come up to that point. Depending on those choices, flexibility has increased or decreased with each one. Let’s look at a typical tech stack choice.</p>
 
 <h4 id="example-integrating-an-analytics-stratgey">Example: Integrating an analytics stratgey.</h4>
 
-<p>The analtyics platform choice itself is not a potential flexibility limiting decision. In fact, the consideration for future flexbility should be in giving the business the option of pulling this dependency out sometime down the road. It’s more the decisions made during the role out of the analytics implementation that will impact whether this can be easily done.</p>
+<p>The analytics platform choice itself is not a potential flexibility limiting decision. In fact, the consideration for future flexibility should be in giving the business the option of pulling this dependency out sometime down the road. It’s more the decisions made during the role out of the analytics implementation that will impact whether this can be easily done.</p>
 
 <p><strong>Inflexible Implementation</strong></p>
 
-<p>Potential How: Drop calls to anlytics API through code at points where events are understood to occur</p>
+<p>Potential How: Drop calls to analytics API through code at points where events are understood to occur</p>
 
 <p>Why Inflexible: One flexibility consideration with a decision like this is to give space to replace this service in the future if it’s not serving the needs of the business. By dropping calls to it all over, the increased overhead of going back to each one when the service needs to be replaced could be prohibitive to making the change.</p>
 
 <p><strong>Flexible Implementation</strong></p>
 
-<p>How: Wrap all calls to the 3rd party anlytics API in a single analytics service class.</p>
+<p>How: Wrap all calls to the 3rd party analytics API in a single analytics service class.</p>
 
 <h4 id="example-monolith-database">Example: Monolith database</h4>
 
-<p>A monolith database is not a typical thing to set out to achieve. Something like this typically comes about as a set of decisions made peicemeal over an extended period of time.</p>
+<p>A monolith database is not a typical thing to set out to achieve. Something like this typically comes about as a set of decisions made piecemeal over an extended period of time.</p>
 
 <p>Consider a database that stores:</p>
 <ul>
@@ -279,27 +280,27 @@
 
 <p>However, when that first piece of user settings data needed to get stored, the decision was made to put it in the database, perhaps even an existing table!</p>
 
-<h3 id="making-decisions-with-flexbility-in-mind-1">Making decisions with flexbility in mind.</h3>
+<h3 id="making-decisions-with-flexibility-in-mind-1">Making decisions with flexibility in mind.</h3>
 
-<p>It may feel easy to blame the engineer behind each decision. This will likely not get your team closer to providing flexibility (as well as being unfair!). If a single engineer makes one of these single decisions and it adds just that granual of inflexibilty, the cumulative effect of many of these decisions adds up.. and becomes a systemic problem.</p>
+<p>It may feel easy to blame the engineer behind each decision. This will likely not get your team closer to providing flexibility (as well as being unfair!). If a single engineer makes one of these single decisions and it adds just that granule of inflexibility, the cumulative effect of many of these decisions adds up.. and becomes a systemic problem.</p>
 
-<p>The answer is to set a shared team commitment to increasing flexibility for the business in every decision that gets made. There should be team discussions of: ‘Does this increase our future flexiblity in this area?’ And: ‘How can we do this in a way where flexibility is increased?’</p>
+<p>The answer is to set a shared team commitment to increasing flexibility for the business in every decision that gets made. There should be team discussions of: ‘Does this increase our future flexibility in this area?’ And: ‘How can we do this in a way where flexibility is increased?’</p>
 
 <h3 id="technical-go-tos">Technical Go-tos</h3>
 
-<p>There are certain concepts that when used in your architecting strategy increase flexibilty. These are reverred by engineers as good practice already, but worth highlighting as flexibity increasers:</p>
+<p>There are certain concepts that when used in your architecting strategy increase flexibility. These are revered by engineers as good practice already, but worth highlighting as flexibility increasers:</p>
 
 <ol>
   <li>DRY - By minimizing duplication, you are leaving flexibility to only replace code in a single place when it needs to be replaced.</li>
-  <li>Single responsibility - A class with a single responsiblity again provides the flexiblity to replace it or the interals of it’s API</li>
-  <li>Micro-services / modular design - a contained item with a limited, defined API also provides flexibilty to be replaced or re-implemented.</li>
+  <li>Single responsibility - A class with a single responsibility again provides the flexibility to replace it or the internals of it’s API</li>
+  <li>Micro-services / modular design - a contained item with a limited, defined API also provides flexibility to be replaced or re-implemented.</li>
 </ol>
 
 <p>These represent tools in the toolbox of an engineering team. They’ve been around too. What I’m advocating is that when evaluating a decision, to look at the options through the lens of ‘increasing flexibility’. Flexibility to back out of that solution. Flexibility to change the strategy in the future. When using this lens, you may dig back into the toolbox to say.. ‘Ah, if we did it this way.. we’d be leaving ourselves an out down the road.’</p>
 
 <h3 id="conclusion---criticalness-to-startups">Conclusion - criticalness to startups</h3>
 
-<p>The world that we are experiencing is, again, one of incredibly rapid change. It’s the businesses who are able to move nimbly that will survive and flourish. Those that are bogged down by their tech and unable to respond to new opportunities or experiment with new ideas will likely eventually fail. And while it absolutely takes more than flexiblity tech to move with efficiency and agility through a market &amp; customer landscape, flexible technology is a huge part of doing this well. It’s our job as technologists to ensure we are making technical decisions that enable a flexible future for the businesses we work with.</p>
+<p>The world that we are experiencing is, again, one of incredibly rapid change. It’s the businesses who are able to move nimbly that will survive and flourish. Those that are bogged down by their tech and unable to respond to new opportunities or experiment with new ideas will likely eventually fail. And while it absolutely takes more than flexibility tech to move with efficiency and agility through a market &amp; customer landscape, flexible technology is a huge part of doing this well. It’s our job as technologists to ensure we are making technical decisions that enable a flexible future for the businesses we work with.</p>
 
 
 
