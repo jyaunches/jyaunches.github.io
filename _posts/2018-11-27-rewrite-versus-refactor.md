@@ -66,19 +66,19 @@ A codebase re-write is a difficult pill for a business to swallow. The idea of t
 
 ### Deciding
 
-Gather metrics.
+#### Gather metrics.
 
 * How much actual time is being spent on new feature work.
 * How much time is being spent on regression (bugs).
 * How must time is being spent refactoring.
 
-How experienced is the team?
+#### How experienced is the team?
 
 * Have team members done significant refactorings or re-writes before.
 * For either path you need a proportion of team members to be architecturally guiding members. Architecture should be decided by the team, but it’s imperative to have one or several members who’ve got the technical chops and the ability to guide the team towards a desired, efficient, flexible architecture. For the refactoring path, you need more of these types of team members involved in day-to-day coding as it’s a more complex journey.
 * What is the team churn? Has anyone been around long enough to deeply know the existing architecture and all its inconsistencies. If not, these will continue to slow the team down as they are discovered.
 
-How bad is the code?
+#### How bad is the code?
 
 * Get the team talking. What changes would need to be made to make things more navigable? How big are those changes. How risky are those changes? Likelihood of bugs and regressions when they happen. Could they happen slowly over a series of features and what would be the unknowns for that journey?
 * Analyze those gathered metrics. If regressions and bugs are frequent and dominate team focus, that’s a red flag. You could be continuing to see that spread
