@@ -7,11 +7,11 @@ featured_image: '/images/refactor-vs-rewrite/roadmap.jpeg'
 
 ---
 
-We are living through an era of increasing innovation and incredible investment in start-ups of all industries. It’s a profound time to be a technologist and entreprenuar. It's also incredibly competitive and if you and your technology can't move nimbly, your business will likely sink.
+We are living through an era of increasing innovation and incredible investment in start-ups of all industries. It’s a profound time to be a technologist and entrepreneur. It's also incredibly competitive and if you and your technology can't move nimbly, your business will likely sink.
 
 ## Success through technology
 
-While industries everywhere are exploring how to tap into new markets or expand existing ones.. the technology and it's implementation are critical to allowing a business to experiment and make fast decisions on direction. Getting bogged down in a tech stack that is difficult to perform experiments with is not an option and will lead to competitors putting you out of business.
+While industries everywhere are exploring how to tap into new markets or expand existing ones.. the technology and its implementation are critical to allowing a business to experiment and make fast decisions on direction. Getting bogged down in a tech stack that is difficult to perform experiments with is not an option and will lead to competitors putting you out of business.
 
 ## What I’ve Found
 
@@ -24,7 +24,7 @@ Are typically just starting out. If you’re building from scratch.. you don’t
 It is unfortunate, but every start-up I’ve encountered and worked with that was more than 3 years old, had some form serious technical challenges impeding their speed. They were unable to capitalize on many or most opportunities presented to them. This is a recipe for failure.
 
 ### The golden goose
-It does happen that a start-up has both moved quickly in the early stages and continued to expand its technology through that expansion without resulting in crippling technical debt. It’s rare though.
+It does happen that a start-up has both moved quickly in the early stages and continued to expand its technology through that growth without resulting in crippling technical debt. It’s rare though.
 
 ## Go from slow to fast
 
@@ -34,11 +34,11 @@ Instead, we’re going to look at how a business and their tech stack can move f
 
 ## First: Analyze & Strategize
 
-We’re talking about the scenario where a business has gradually found the flexibility of their tech stack decreasing and they’ve reach the point of ‘Ok, we’re ready to do something about about this: shift things and make compromises to increase flexibility for business capacity or expansion.’
+We’re talking about the scenario where a business has gradually found the flexibility of their tech stack decreasing and they’ve reached the point of ‘Ok, we’re ready to do something about this: shift things and make compromises to increase flexibility for business capacity or expansion.’
 
 Understand the picture
 
-Look at the entire tech stack. Where are things slow, why. What are the critical areas that if improved, would allow for the most exploration of the product?
+Look at the entire tech stack. Where are things slow, why? What are the critical areas that if improved, would allow for the most exploration of the product?
 
 Metrics are key and we’ll dig into those later. Gather metrics about where time is being spent and talk to engineers about what are the most painful areas of their day-to-day work.
 
@@ -62,7 +62,7 @@ The issue with this is that it’s not a valuable metric for how much enablement
 
 ### Evaluating a Rewrite
 
-A codebase re-write is a difficult pill for a business to swallow. The idea of throwing away code that a lot of resources have been invested in is tough and feels wasteful. There’s also the likelihood that there will be a longer wait for those new exciting features while the current functionality is re-examined and re-implemented.
+A codebase rewrite is a difficult pill for a business to swallow. The idea of throwing away code that a lot of resources have been invested in is tough and feels wasteful. There’s also the likelihood that there will be a longer wait for those new exciting features while the current functionality is re-examined and re-implemented.
 
 ### Deciding
 
@@ -70,11 +70,11 @@ A codebase re-write is a difficult pill for a business to swallow. The idea of t
 
 * How much actual time is being spent on new feature work.
 * How much time is being spent on regression (bugs).
-* How must time is being spent refactoring.
+* How much time is being spent refactoring.
 
 #### How experienced is the team?
 
-* Have team members done significant refactorings or re-writes before.
+* Have team members done significant refactorings or rewrites before.
 * For either path you need a proportion of team members to be architecturally guiding members. Architecture should be decided by the team, but it’s imperative to have one or several members who’ve got the technical chops and the ability to guide the team towards a desired, efficient, flexible architecture. For the refactoring path, you need more of these types of team members involved in day-to-day coding as it’s a more complex journey.
 * What is the team churn? Has anyone been around long enough to deeply know the existing architecture and all its inconsistencies. If not, these will continue to slow the team down as they are discovered.
 
@@ -109,23 +109,23 @@ Take the time to setup accurate tracking here. It will allow you to reach the ri
 
 ### Lack of seasoned engineers who’ve walked the path before
 
-Be it a long term refactoring strategy or a complete greenfield rewrite, it’s imperative to have a diverse team of talent. It’s ideal to have engineers who’ve undertaken the path you’ve chosen. Not having this will significantly increase risk that you do not end up with a a clean, consistent, improved architecture at the end of your efforts.
+Be it a long term refactoring strategy or a complete greenfield rewrite, it’s imperative to have a diverse team of talent. It’s ideal to have engineers who’ve undertaken the path you’ve chosen. Having this will significantly increase the likelihood of ending up with a clean, consistent, improved architecture at the end of your efforts.
 
 ### Lacking of full buy-in from all stakeholders
 
-From the product manager, UX designer.. all the way to the CEO what’s going to spell the most success is involvement and visibility to all in the decision and progress.
+From the product manager, UX designer, all the way to the CEO.. what’s going to spell the most success is involvement from all and visibility to all in the decision and progress in the rollout of that decision.
 
 ## Summing it up
 
-This article started out by introducing the idea that for start-ups to succeed, they must be able to experiment quickly into new potential areas of serving their customers.
+This article started out by introducing the idea that for start-ups to succeed, they must be able to experiment quickly in new potential areas of serving their customers.
 
-If they happen to be hindered with a shoddy tech stack that makes this kind of experimentation extremely expensive, they are likely headed for failure without some sort of course correction.
+If they happen to be hindered with a shoddy tech stack that makes this kind of experimentation extremely expensive, they are likely headed for failure (without some sort of course correction).
 
-The options available are many, but span some form of refactor or re-write. And this decision could be different across all parts of the tech stack causing problems. You may selectively choose to re-write a portion and refactor a portion. Perhaps re-write your APIs, but refactor your clients. It all depends.
+The options available are many, but span some form of refactor or rewrite. And this decision could be different across all parts of the tech stack causing problems. You may selectively choose to rewrite a portion and refactor a portion. Perhaps rewrite your APIs, but refactor your clients. It all depends.
 
-Many time, however, a re-write is not tackled as it is deemed to expensive in the short term. You often have to spend resources not only to build out the new, but maintain the old.
+Many time, however, a rewrite is not tackled as it is deemed to expensive in the short term. You often have to spend resources not only to build out the new, but maintain the old.
 
-What's at the root of the argument put forward in this article is that it often quite a bit more expensive and risky to _refactor_ an inefficient and difficult to manage codebase. It takes the right technical leadership and team. And if you happen to have the team who are capable of this, you may spend more time still taking the codebase to the place where that _fast-paced experimentation_ is possible.
+What's at the root of the argument put forward in this article is that it's often quite a bit more expensive and risky to _refactor_ an inefficient and difficult to manage codebase. It takes the right technical leadership and team. And if you happen to have the team who are capable of this, you may spend more time still taking the codebase to the place where that _fast-paced experimentation_ is possible.
 
 
 
