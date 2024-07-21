@@ -9,8 +9,6 @@ header_settings:
 
 menu_settings:
   menu_items:
-    - title: 'AI Career pivot'
-      url: 'https://yaunch.notion.site/AI-Career-Pivot-c72ead2258344fca913e5d786b71b6da?pvs=4'
     - title: 'Blog'
       url: '/blog/'
     - title: 'Speaking'
