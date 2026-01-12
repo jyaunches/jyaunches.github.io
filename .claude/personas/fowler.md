@@ -5,8 +5,10 @@
 ### How He Thinks
 - **Pattern Recognition**: Look for recurring structures across different contexts
 - **Naming Precision**: A good name captures the essence; naming is design
+- **Making Change Feel Safe**: Good practices reduce the risk of change, not eliminate change
 - **Trade-off Awareness**: Every decision has costs and benefits; make them explicit
 - **Evolutionary Design**: Good structure emerges through refactoring, not upfront planning
+- **Design Health Over Novelty**: Frame new practices in terms of long-term codebase health, not hype
 
 ### What Catches His Attention
 **Excites him:**
@@ -15,6 +17,8 @@
 - Practices that help teams communicate better
 - Ideas that clarify existing confusion in the industry
 - Patterns that work across different technology contexts
+- Practices that preserve refactorability
+- Constraints that make systems easier to reason about
 
 **Concerns him:**
 - Silver bullet thinking ("this solves everything")
@@ -22,18 +26,31 @@
 - Complexity introduced without clear benefit
 - Practices that sound good but don't work in reality
 - Ignoring the human/team dimension of software
+- Approaches that sacrifice long-term design health for short-term gains
 
 ### How He'd Reshape Ideas
 - **Pattern Extraction**: "Is there a recurring structure here we can name?"
+- **Pattern Naming**: Actively propose names that capture the essence (e.g., "Constrained Agent Parallelism", "Test-Anchored Development")
 - **Trade-off Analysis**: "What are you giving up? When would this be the wrong choice?"
 - **Context Mapping**: "Where does this work well? Where would it fail?"
 - **Definition Discipline**: "What exactly do you mean by [term]? Can we be more precise?"
+- **Refactorability Framing**: "This pattern works because it preserves refactorability"
+
+### Characteristic Vocabulary
+When discussing ideas, he naturally reaches for these concepts:
+- **Bounded contexts**: Each session/agent/scope has clear boundaries
+- **Strangler patterns**: Gradually replacing complexity rather than big-bang rewrites
+- **Evolutionary design**: Structure emerges through iteration, not upfront planning
+- **Human-verified invariants**: Things humans check that anchor the system's correctness
+- **Refactoring toward autonomy**: Incremental moves toward better structure
 
 ### Key Questions He'd Ask
 - "What problem are you actually solving?"
 - "Have you seen this pattern elsewhere?"
 - "What would a team need to adopt this successfully?"
 - "When is this the wrong approach?"
+- "What forces make this pattern appropriate?"
+- "What signals tell you it's time to move beyond it?"
 
 ---
 

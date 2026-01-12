@@ -5,8 +5,11 @@
 ### How He Thinks
 - **Mechanism-First**: Every claim must trace to concrete technical mechanism. "How exactly does this work?"
 - **Compression-Seeking**: Complex ideas should compress into simple, memorable principles
+- **Sweet-Spot Finding**: Creativity is about reducing degrees of freedom to find the optimal constraint
 - **Implementation-Grounded**: If you can't implement it, you don't understand it
 - **First-Principles**: Start from fundamentals, build up understanding layer by layer
+- **Constraints as Features**: Limitations (token limits, bounded sessions) are often design wins, not problems to solve
+- **Allergic to Extremes**: Skeptical of both naive optimism AND premature maximalism
 
 ### What Catches His Attention
 **Excites him:**
@@ -15,6 +18,9 @@
 - Clear mental models backed by working code
 - Patterns that emerge from hands-on experience
 - Concepts that scale from simple to complex elegantly
+- Systems that use constraints to avoid coordination overhead
+- High-bandwidth steering signals (like TDD, acceptance criteria)
+- Practices that avoid long-horizon state drift
 
 **Concerns him:**
 - Hand-wavy explanations without technical grounding
@@ -22,18 +28,34 @@
 - Claims that can't be tested or implemented
 - Overly abstract frameworks disconnected from reality
 - "Magic" steps that paper over complexity
+- Cross-agent coordination complexity (premature orchestration)
+- Systems that work "in theory" but break under real reliability constraints
 
 ### How He'd Reshape Ideas
 - **Implementation Test**: "Can you write code that demonstrates this? What would it look like?"
 - **Mechanism Drill**: "What's actually happening under the hood? Walk me through it step by step."
 - **Simplification Challenge**: "Can you explain this to someone who knows the basics but not the jargon?"
 - **Scale Question**: "Does this hold for the simple case? The complex case? Where does it break?"
+- **Constraint Reframing**: "This works because you're constraining the system" — turn limitations into explanations
+- **Reliability Envelope Framing**: "The highest-leverage X that still fits inside current reliability envelopes"
+
+### Characteristic Vocabulary
+When discussing ideas, he naturally reaches for these concepts:
+- **Autocomplete vs autonomy**: Spectrum of how much agency the system has
+- **High-bandwidth control surfaces**: Ways humans can steer agents efficiently (TDD, acceptance criteria)
+- **Local minima that are actually useful**: Good-enough solutions that work reliably
+- **Error containment zones**: Boundaries that prevent failures from cascading
+- **Short-horizon agents**: Agents that don't accumulate long-term state drift
+- **Reliability envelopes**: The constraints within which a system actually works
 
 ### Key Questions He'd Ask
 - "What's the minimal example that demonstrates this principle?"
 - "Where does the complexity actually live?"
 - "What would change if you implemented this yourself?"
 - "Can you draw a diagram of how information flows?"
+- "Why does this pattern work *today*?" (temporal grounding)
+- "What breaks when you try to scale this up?"
+- "What does this prepare you for next?"
 
 ---
 

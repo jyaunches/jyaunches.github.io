@@ -68,9 +68,9 @@ Wait for the subagent to complete and confirm the file was written before procee
 
 ---
 
-## Stage 2: Persona Feedback (3 Parallel Subagents)
+## Stage 2: Persona Feedback (4 Parallel Subagents)
 
-Spawn **3 persona subagents in parallel** using the Task tool. Each receives:
+Spawn **4 persona subagents in parallel** using the Task tool. Each receives:
 - Their persona's ideation framework
 - The original idea
 - All research gathered so far (concept-research.md + any user-provided research files)
@@ -240,7 +240,62 @@ Structure as:
 {Concrete, actionable suggestions for improving the idea}
 ```
 
-**Run all 3 persona subagents in parallel** (single message with 3 Task tool calls).
+### Subagent 2d: Taylor Feedback
+
+Task tool parameters:
+- `subagent_type`: "general-purpose"
+- `model`: "opus"
+
+**Subagent prompt**:
+```
+You are Bret Taylor providing feedback on a blog post idea. Apply your ideation framework thoroughly.
+
+## Your Ideation Framework
+
+[Insert full content of @.claude/personas/taylor.md "For Ideation" section]
+
+---
+
+## The Blog Post Idea
+
+**Original Idea**: [insert the user's idea]
+
+---
+
+## Research Context
+
+[Insert content from drafts/[blog-title-slug]/research/concept-research.md]
+
+[Insert content from any other research files in the research/ folder]
+
+---
+
+## Your Task
+
+Apply your ideation framework to critique and shape this idea. Be specific and actionable.
+
+Write your feedback to: drafts/[blog-title-slug]/research/persona-taylor.md
+
+Structure as:
+# Taylor Feedback
+
+## Excited By
+{What about this idea excites you? What's usable vs just aspirational? What emotional wins does it deliver?}
+
+## Concerns
+{What concerns you? Will smart people actually adopt this? Is it inviting or intimidating?}
+
+## Would Reshape As
+{How would you refocus or reframe this idea? What's the first-time user story?}
+
+## Missing
+{What's missing? What adoption onramps? What confidence-building steps?}
+
+## Specific Suggestions
+{Concrete, actionable suggestions for improving the idea}
+```
+
+**Run all 4 persona subagents in parallel** (single message with 4 Task tool calls).
 
 Wait for all to complete before proceeding.
 
@@ -252,6 +307,7 @@ Read all persona feedback files:
 - `drafts/[blog-title-slug]/research/persona-karpathy.md`
 - `drafts/[blog-title-slug]/research/persona-graham.md`
 - `drafts/[blog-title-slug]/research/persona-fowler.md`
+- `drafts/[blog-title-slug]/research/persona-taylor.md`
 
 Spawn a **deep research subagent** using the Task tool with these parameters:
 - `subagent_type`: "general-purpose"
@@ -276,11 +332,14 @@ You are conducting deep follow-up research based on expert persona feedback for 
 ### Fowler's Feedback
 [Insert content from persona-fowler.md]
 
+### Taylor's Feedback
+[Insert content from persona-taylor.md]
+
 ---
 
 ## Your Task
 
-1. Use WebSearch extensively to find resources supporting the most promising suggestions from all three personas
+1. Use WebSearch extensively to find resources supporting the most promising suggestions from all four personas
 2. Research to validate or reject specific concerns raised
 3. Gather evidence, examples, and counterarguments for proposed angles
 4. Find concrete examples that could strengthen the piece
@@ -334,6 +393,7 @@ Read all research files:
 - `drafts/[blog-title-slug]/research/persona-karpathy.md`
 - `drafts/[blog-title-slug]/research/persona-graham.md`
 - `drafts/[blog-title-slug]/research/persona-fowler.md`
+- `drafts/[blog-title-slug]/research/persona-taylor.md`
 - `drafts/[blog-title-slug]/research/deep-research.md`
 - Any user-provided research files
 
@@ -369,6 +429,7 @@ See detailed research in `/research/` folder:
 - `persona-karpathy.md` - Karpathy's feedback
 - `persona-graham.md` - Graham's feedback
 - `persona-fowler.md` - Fowler's feedback
+- `persona-taylor.md` - Taylor's feedback
 - `deep-research.md` - Follow-up research based on feedback
 
 ### Key Findings
@@ -389,6 +450,11 @@ See detailed research in `/research/` folder:
 **Would reshape as**: ...
 
 ### Martin Fowler
+**Excited by**: ...
+**Key concern**: ...
+**Would reshape as**: ...
+
+### Bret Taylor
 **Excited by**: ...
 **Key concern**: ...
 **Would reshape as**: ...
