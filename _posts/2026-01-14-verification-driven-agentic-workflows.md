@@ -24,7 +24,7 @@ I've packaged these as a [Claude Code plugin](https://github.com/jyaunches/vd_wo
 The sections that follow break down each piece: 
 * The spec file structure that encodes verification criteria
 * The review workflow that verifies the plan
-* The implementation workflow that uses [TDD as the verification signal](#appendix){:.js-no-ajax} for each phase.
+* The implementation workflow that iterates over the verification steps defined in planning. (Mine also uses [TDD](#appendix){:.js-no-ajax}.)
 
 These are tuned to my engineering practices—simplicity, architectural consistency, test coverage. Yours might emphasize different things. [See the appendix](#appendix){:.js-no-ajax} for more on what I verify and how a different team might configure theirs.
 
@@ -82,6 +82,8 @@ The output is a draft spec—verifiable structure ready for review.
 
 #### Workflow 1 Flowchart
 
+---
+
 ```mermaid
 flowchart LR
     Start(["/spec"]) --> Analyze["Analyze Codebase"]
@@ -124,6 +126,8 @@ Each check is a verification loop—the agent reviews, suggests changes, and ref
 
 #### A Review Loop Over the Spec
 
+---
+
 ```mermaid
 flowchart LR
     A["Simplify<br/>Remove over-engineering"] --> B["Generate Tests<br/>Create test spec file"] --> C["Review Design<br/>Align to patterns"] --> D["Review Implementation<br/>Fill gaps, clarify"] --> Done(["Final Spec"])
@@ -133,6 +137,8 @@ flowchart LR
     style C fill:#e8ecf1,color:#2A2F36,stroke:#6C7A89
     style D fill:#e8ecf1,color:#2A2F36,stroke:#6C7A89
 ```
+
+---
 
 *PATTERNS.md guides: Simplify, Review Design, Review Implementation*
 
@@ -150,6 +156,8 @@ For each phase:
 The git hash serves as a checkpoint—if context resets, the agent knows where to resume.
 
 The final validation phase is another verification loop. The agent uses whatever tools match the task—Playwright for UI, CLI calls for APIs, job monitors for CI—and iterates until validation criteria are met.
+
+---
 
 ```mermaid
 flowchart LR
