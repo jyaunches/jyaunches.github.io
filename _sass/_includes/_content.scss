@@ -101,7 +101,8 @@
 	}
 
 	blockquote,
-	figure {
+	figure,
+	.mermaid {
 		margin: 20px auto;
 
 		@include mq(tabletp) {
@@ -110,6 +111,18 @@
 
 		@include mq(laptop) {
 			margin: 40px auto;
+		}
+	}
+
+	.mermaid {
+		text-align: center;
+
+		@include mq(tabletl) {
+			max-width: 70%;
+		}
+
+		@include mq(laptop) {
+			max-width: 65%;
 		}
 	}
 
