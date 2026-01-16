@@ -9,7 +9,7 @@ mermaid: true
 
 ![](/images/verification-driven-agentic-workflows/cover.png)
 
-Today, I am introducing the concept of verification-driven agentic workflows. The approach: define verification criteria upfront across the entire lifecycle of a workflow, then let the agent iterate until those criteria are met. Checking in as the human at the points that you deem reasonable.
+Today, I am introducing the concept of verification-driven agentic workflows. The approach: define (and continually refine) verification criteria across the entire lifecycle of a workflow, then let the agent iterate until those criteria are met. Checking in as the human at the points that you deem reasonable.
 
 The insight underneath is simple: **verifiable tasks are automatable tasks**. This is a distillation of an [original idea](https://karpathy.bearblog.dev/verifiability/) from Andrej Karpathy on his idea of Software 2.0. It is also inherits from RLVR (Reinforcement Learning from Verifiable Rewards)—the approach that's driven the recent wave of reasoning models. Tests are resettable, efficient, and provide non-gameable reward signals. Give the model a verification target and let it practice.
 
@@ -24,9 +24,9 @@ I've packaged these as a [Claude Code plugin](https://github.com/jyaunches/vd_wo
 The sections that follow break down each piece: 
 * The spec file structure that encodes verification criteria
 * The review workflow that verifies the plan
-* The implementation workflow that uses [TDD as the verification signal](#on-tdd) for each phase.
+* The implementation workflow that uses [TDD as the verification signal](#appendix){:.js-no-ajax} for each phase.
 
-These are tuned to my engineering practices—simplicity, architectural consistency, test coverage. Yours might emphasize different things. [See the appendix](#tuning-your-verification-criteria) for more on what I verify and how a different team might configure theirs.
+These are tuned to my engineering practices—simplicity, architectural consistency, test coverage. Yours might emphasize different things. [See the appendix](#appendix){:.js-no-ajax} for more on what I verify and how a different team might configure theirs.
 
 ---
 
@@ -179,15 +179,25 @@ flowchart LR
 
 ---
 
-## The Takeaway
+## One Application
 
-I've used this workflow to build a personal budgeting app—a project with complex integrations across multiple third-party services. The codebase has 98% unit test coverage on human-confirmed test cases, plus a suite of validation tests derived from the specs that created it. Those validation tests run via Playwright and can be executed at any time to verify the feature set still works.
+I've used this workflow to build a few personal applications of ranging complexity (Future posts coming on these perhaps!). These codebases have extremely high unit test coverage on human-confirmed test cases, plus suites of validation tests derived from the specs that created them. Those validation tests run via Playwright and can be executed at any time to verify respective feature sets still works.
 
-That's the point: the verification artifacts *are* the evidence. The test coverage, the validation suite, the spec files—they're not just process overhead. They're how you know the system did what you asked.
+## The Take-away
+
+Bringing it back to the original concept: this is RLVR (Reinforcement Learning from Verifiable Rewards) for your agentic workflow. The workflows I've presented define the reward signal—acceptance criteria, passing tests, validation checks—and let the agent iterate until it meets them.
+
+The underlying insight remains: **verifiable tasks are automatable tasks.** The more precisely you can define "done," the more confidently you can hand the loop to an agent. 
 
 ---
 
 ## Appendix
+
+### On TDD
+
+In the agentic context, TDD serves a crucial additional purpose: it provides an objective, programmatic signal for whether a phase is complete. The agent writes tests first, confirms they fail, implements until they pass, then moves on. No ambiguity, no drift—the tests are the contract. This grounds the loop in something verifiable rather than relying on the agent's self-assessment.
+
+---
 
 ### Tuning Your Verification Criteria
 
@@ -200,9 +210,6 @@ The workflows in this article verify against criteria I've found valuable over 2
 - **No backward compatibility hacks** — Direct integration, no shims or feature flags unless explicitly needed
 - **Clean documentation** — README and CLAUDE.md stay current with changes
 
-**Why these matter to me:**
-These criteria keep codebases small, readable, and maintainable by agents. Simplicity means less surface area for bugs. Consistency means the agent can learn patterns once and apply them everywhere. Test coverage provides the verification signal that makes the whole approach work.
-
 **What a different team might emphasize:**
 - **Security-first** — Verify authentication patterns, input validation, secrets handling at every phase
 - **Performance** — Verify latency budgets, query efficiency, caching strategies
@@ -211,9 +218,3 @@ These criteria keep codebases small, readable, and maintainable by agents. Simpl
 - **API stability** — Verify backward compatibility (the opposite of my preference), versioning, deprecation patterns
 
 The point isn't that my criteria are right—it's that you define yours explicitly, encode them into your verification loop (in this example, that's the PATTERNS.md), and let the agent verify against them. The workflow is the same; the verification targets are yours to choose.
-
----
-
-### On TDD
-
-In the agentic context, TDD serves a crucial additional purpose: it provides an objective, programmatic signal for whether a phase is complete. The agent writes tests first, confirms they fail, implements until they pass, then moves on. No ambiguity, no drift—the tests are the contract. This grounds the loop in something verifiable rather than relying on the agent's self-assessment.
