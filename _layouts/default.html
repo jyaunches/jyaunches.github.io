@@ -97,6 +97,9 @@
 	{{ site.data.settings.advanced_settings.footer_js }}
 	{% endif %}
 
+	{% if page.mermaid %}
+	{% include mermaid.html %}
+	{% endif %}
 
 </body>
 

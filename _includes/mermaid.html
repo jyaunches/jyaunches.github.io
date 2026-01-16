@@ -1,6 +1,15 @@
 <!-- Mermaid Diagrams -->
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 <script>
+  // Transform markdown code blocks to mermaid divs before initialization
+  document.querySelectorAll('pre code.language-mermaid').forEach(function(codeBlock) {
+    var pre = codeBlock.parentElement;
+    var div = document.createElement('div');
+    div.className = 'mermaid';
+    div.textContent = codeBlock.textContent;
+    pre.parentNode.replaceChild(div, pre);
+  });
+
   mermaid.initialize({
     startOnLoad: true,
     theme: 'base',
