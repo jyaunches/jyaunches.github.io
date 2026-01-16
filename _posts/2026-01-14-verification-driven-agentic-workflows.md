@@ -1,15 +1,15 @@
 ---
-title: 'Verification-Driven Agentic Coding'
+title: 'Verification-Driven Agentic Workflows'
 subtitle: Article
 date: 2026-01-14
-description: 'A workflow for agentic coding grounded in verification—define what right looks like, let the agent iterate until criteria are met.'
-featured_image: '/images/verification-driven-agentic-coding/cover.png'
+description: 'A principle for agentic workflows—define what right looks like, let the agent iterate until criteria are met.'
+featured_image: '/images/verification-driven-agentic-workflows/cover.png'
 mermaid: true
 ---
 
-![](/images/verification-driven-agentic-coding/cover.png)
+![](/images/verification-driven-agentic-workflows/cover.png)
 
-Today, I am introducing the concept of verification-driven agentic coding. The idea is that you define what to verify across the entire lifecycle of feature development, and then setup the agent to iterate until those criteria are met.
+Today, I am introducing the concept of verification-driven agentic workflows. The approach: define verification criteria upfront across the entire lifecycle of a workflow, then let the agent iterate until those criteria are met. Checking in as the human at the points that you deem reasonable.
 
 The insight underneath is simple: **verifiable tasks are automatable tasks**. This is a distillation of an [original idea](https://karpathy.bearblog.dev/verifiability/) from Andrej Karpathy on his idea of Software 2.0. It is also inherits from RLVR (Reinforcement Learning from Verifiable Rewards)—the approach that's driven the recent wave of reasoning models. Tests are resettable, efficient, and provide non-gameable reward signals. Give the model a verification target and let it practice.
 
