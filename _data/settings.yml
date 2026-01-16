@@ -1,6 +1,6 @@
 basic_settings:
   site_title: Julietta Yaunches
-  site_tagline: Technologist, architect and community leader based in New York.
+  site_tagline: 'AI engineer & researcher at NVIDIA. <span style="font-size: 0.75em; font-style: italic;">(the opinions on this site are mine alone)</span>'
   favicon_image: /images/favicon.png
 
 header_settings:
