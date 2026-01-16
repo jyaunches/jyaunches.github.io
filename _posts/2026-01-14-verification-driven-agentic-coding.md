@@ -3,13 +3,28 @@ title: 'Verification-Driven Agentic Coding'
 subtitle: Article
 date: 2026-01-14
 description: 'A workflow for agentic coding grounded in verification—define what right looks like, let the agent iterate until criteria are met.'
-featured_image: '/images/practical-agentic-coding/cover.png'
+featured_image: '/images/verification-driven-agentic-coding/cover.png'
 mermaid: true
 ---
 
-Verification-driven means defining up front what the agent must get right—and spending the time to articulate what 'right' looks like. Architecture alignment. Codebase patterns. Simplicity. Test coverage. These are tunable criteria, not a fixed list. The point is that *you* define what to verify, and the agent iterates until those criteria are met. The workflows I'll present apply this principle across planning and implementation, turning your definition of 'right' into checkpoints the agent can verify against.
+In agentic coding, verification-driven means defining up front what the agent must get right—and spending the time to articulate what 'right' looks like. Architecture alignment. Codebase patterns. Simplicity. Test coverage. These are tunable criteria, not a fixed list. The point is that *you* define what to verify, and the agent iterates until those criteria are met. The workflows I'll present apply this principle across planning and implementation, turning your definition of 'right' into checkpoints the agent can verify against.
 
-The insight underneath is simple: **verifiable tasks are automatable tasks.** This is the same mechanism behind RLVR (Reinforcement Learning from Verifiable Rewards) that drove the reasoning capabilities of o1 and o3. Tests are resettable, efficient, and provide non-gameable reward signals. Give the model a verification target and let it practice.
+The insight underneath is simple: **verifiable tasks are automatable tasks**. This is a distillation of an [original idea](https://karpathy.bearblog.dev/verifiability/) from Andrej Karpathy on his idea of Software 2.0. It is also inherits from RLVR (Reinforcement Learning from Verifiable Rewards)—the approach that's driven the recent wave of reasoning models. Tests are resettable, efficient, and provide non-gameable reward signals. Give the model a verification target and let it practice.
+
+## From Principle to Practice
+
+The rest of this article walks through an example of how to put this into practice when using an agentic coding harness to write software features. I'll show this by speaking to a set of workflows that I have designed and refined over recent months. 
+
+The approach uses two workflows: one that transforms a plan into a structured, verifiable spec; and one that reviews that spec against your standards, then implements it phase-by-phase using TDD. 
+
+I've packaged these as a Claude Code plugin with two main commands: `/spec` creates the specification with phases, acceptance criteria, and a validation strategy; `/execute-wf` runs the review and implementation loops. The plugin, the spec file structure, and the verification criteria are all tunable—what follows is how I've configured mine.
+
+The sections that follow break down each piece: 
+* The spec file structure that encodes verification criteria
+* The review workflow that verifies the plan
+* The implementation workflow that uses [TDD as the verification signal](#appendix-on-tdd) for each phase. 
+
+These are tuned to my engineering practices—simplicity, architectural consistency, test coverage. Yours might emphasize different things. [See the appendix](#appendix-tuning-your-verification-criteria) for more on what I verify and how a different team might configure theirs.
 
 ---
 
@@ -25,17 +40,12 @@ Here's how mine are structured:
 block-beta
     columns 1
 
-    block:spec["SPEC FILE"]
-        columns 1
-        A["OVERVIEW & OBJECTIVES<br/>— Problem statement and goals —"]
-        B["CURRENT STATE ANALYSIS<br/>— What exists vs. what's needed —"]
-        C["ARCHITECTURE DESIGN<br/>— Conceptual description, diagrams (no code) —"]
-        D["IMPLEMENTATION PHASES<br/>— Phase 1, 2, ... N with acceptance criteria —"]
-        E["FINAL PHASE: CLEAN THE HOUSE<br/>— Dead code removal, docs update —"]
-        F["VALIDATION PHASE<br/>— Tools & methods to confirm feature works E2E —"]
-    end
-
-    style spec fill:#F5F7FA,stroke:#0C5DF2,stroke-width:2px
+    A["OVERVIEW & OBJECTIVES<br/>— Problem statement and goals —"]
+    B["CURRENT STATE ANALYSIS<br/>— What exists vs. what's needed —"]
+    C["ARCHITECTURE DESIGN<br/>— Conceptual description, diagrams (no code) —"]
+    D["IMPLEMENTATION PHASES<br/>— Phase 1, 2, ... N with acceptance criteria —"]
+    E["FINAL PHASE: CLEAN THE HOUSE<br/>— Dead code removal, docs update —"]
+    F["VALIDATION PHASE<br/>— Tools & methods to confirm feature works E2E —"]
     style A fill:#0C5DF2,color:#ffffff,stroke:#0945b5
     style B fill:#0C5DF2,color:#ffffff,stroke:#0945b5
     style C fill:#0C5DF2,color:#ffffff,stroke:#0945b5
@@ -204,3 +214,34 @@ flowchart LR
     style R fill:#e8ecf1,color:#2A2F36,stroke:#6C7A89
     style I fill:#0C5DF2,color:#ffffff,stroke:#0945b5
 ```
+
+---
+
+## Appendix: Tuning Your Verification Criteria
+
+The workflows in this article verify against criteria I've found valuable over 20 years of engineering practice:
+
+**What I verify:**
+- **Simplicity** — No over-engineering, no speculative abstractions, YAGNI enforced
+- **Architectural consistency** — New code follows existing patterns, no parallel systems
+- **Test coverage** — Unit tests for each phase, validation tests for the feature
+- **No backward compatibility hacks** — Direct integration, no shims or feature flags unless explicitly needed
+- **Clean documentation** — README and CLAUDE.md stay current with changes
+
+**Why these matter to me:**
+These criteria keep codebases small, readable, and maintainable by agents. Simplicity means less surface area for bugs. Consistency means the agent can learn patterns once and apply them everywhere. Test coverage provides the verification signal that makes the whole approach work.
+
+**What a different team might emphasize:**
+- **Security-first** — Verify authentication patterns, input validation, secrets handling at every phase
+- **Performance** — Verify latency budgets, query efficiency, caching strategies
+- **Accessibility** — Verify WCAG compliance, screen reader compatibility, keyboard navigation
+- **Compliance** — Verify audit logging, data retention policies, regulatory requirements
+- **API stability** — Verify backward compatibility (the opposite of my preference), versioning, deprecation patterns
+
+The point isn't that my criteria are right—it's that you define yours explicitly, encode them into your verification loop (in this example, that's the PATTERNS.md), and let the agent verify against them. The workflow is the same; the verification targets are yours to choose.
+
+---
+
+## Appendix: On TDD
+
+In the agentic context, TDD serves a crucial additional purpose: it provides an objective, programmatic signal for whether a phase is complete. The agent writes tests first, confirms they fail, implements until they pass, then moves on. No ambiguity, no drift—the tests are the contract. This grounds the loop in something verifiable rather than relying on the agent's self-assessment.
