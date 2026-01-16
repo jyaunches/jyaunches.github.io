@@ -7,7 +7,9 @@ featured_image: '/images/verification-driven-agentic-coding/cover.png'
 mermaid: true
 ---
 
-In agentic coding, verification-driven means defining up front what the agent must get right—and spending the time to articulate what 'right' looks like. Architecture alignment. Codebase patterns. Simplicity. Test coverage. These are tunable criteria, not a fixed list. The point is that *you* define what to verify, and the agent iterates until those criteria are met. The workflows I'll present apply this principle across planning and implementation, turning your definition of 'right' into checkpoints the agent can verify against.
+![](/images/verification-driven-agentic-coding/cover.png)
+
+Today, I am introducing the concept of verification-driven agentic coding. The idea is that you define what to verify across the entire lifecycle of feature development, and then setup the agent to iterate until those criteria are met.
 
 The insight underneath is simple: **verifiable tasks are automatable tasks**. This is a distillation of an [original idea](https://karpathy.bearblog.dev/verifiability/) from Andrej Karpathy on his idea of Software 2.0. It is also inherits from RLVR (Reinforcement Learning from Verifiable Rewards)—the approach that's driven the recent wave of reasoning models. Tests are resettable, efficient, and provide non-gameable reward signals. Give the model a verification target and let it practice.
 
@@ -15,16 +17,16 @@ The insight underneath is simple: **verifiable tasks are automatable tasks**. Th
 
 The rest of this article walks through an example of how to put this into practice when using an agentic coding harness to write software features. I'll show this by speaking to a set of workflows that I have designed and refined over recent months. 
 
-The approach uses two workflows: one that transforms a plan into a structured, verifiable spec; and one that reviews that spec against your standards, then implements it phase-by-phase using TDD. 
+The approach uses two workflows: one that transforms a plan into a structured, verifiable spec; and one that reviews that spec against your standards, then implements it phase-by-phase using TDD. Both workflows use verification loops to ensure the best practices I find important are applied throughout the work that is done. 
 
-I've packaged these as a Claude Code plugin with two main commands: `/spec` creates the specification with phases, acceptance criteria, and a validation strategy; `/execute-wf` runs the review and implementation loops. The plugin, the spec file structure, and the verification criteria are all tunable—what follows is how I've configured mine.
+I've packaged these as a [Claude Code plugin](https://github.com/jyaunches/vd_workflow) with two main commands: `/spec` creates the specification with phases, acceptance criteria, and a validation strategy; `/execute-wf` runs the review and implementation loops. The plugin, the spec file structure, and the verification criteria are all tunable—what follows is how I've configured mine.
 
 The sections that follow break down each piece: 
 * The spec file structure that encodes verification criteria
 * The review workflow that verifies the plan
-* The implementation workflow that uses [TDD as the verification signal](#appendix-on-tdd) for each phase. 
+* The implementation workflow that uses [TDD as the verification signal](#on-tdd) for each phase.
 
-These are tuned to my engineering practices—simplicity, architectural consistency, test coverage. Yours might emphasize different things. [See the appendix](#appendix-tuning-your-verification-criteria) for more on what I verify and how a different team might configure theirs.
+These are tuned to my engineering practices—simplicity, architectural consistency, test coverage. Yours might emphasize different things. [See the appendix](#tuning-your-verification-criteria) for more on what I verify and how a different team might configure theirs.
 
 ---
 
@@ -185,39 +187,9 @@ That's the point: the verification artifacts *are* the evidence. The test covera
 
 ---
 
-## Full Pipeline Overview
+## Appendix
 
-Bird's-eye view of the entire system:
-
-```mermaid
-flowchart LR
-    subgraph Planning["Planning"]
-        P["Talk to Agent /<br/>Get Plan in Context Window"]
-    end
-
-    subgraph Spec["/spec"]
-        S["Turn plan into phases<br/><br/>Design validation phase<br/><br/>(Produce spec file)"]
-    end
-
-    subgraph ExecuteWF["/execute-wf"]
-        direction LR
-        R["Review Phase<br/><br/>Simplify, apply best practices<br/>& produce test spec"]
-        I["Implementation<br/><br/>Loop over phases:<br/>TDD + Validation"]
-        R --> I
-    end
-
-    Planning --> Spec --> ExecuteWF
-
-    style Planning fill:#F5F7FA,color:#2A2F36,stroke:#dddddd
-    style Spec fill:#0C5DF2,color:#ffffff,stroke:#0945b5
-    style ExecuteWF fill:#F5F7FA,color:#2A2F36,stroke:#dddddd
-    style R fill:#e8ecf1,color:#2A2F36,stroke:#6C7A89
-    style I fill:#0C5DF2,color:#ffffff,stroke:#0945b5
-```
-
----
-
-## Appendix: Tuning Your Verification Criteria
+### Tuning Your Verification Criteria
 
 The workflows in this article verify against criteria I've found valuable over 20 years of engineering practice:
 
@@ -242,6 +214,6 @@ The point isn't that my criteria are right—it's that you define yours explicit
 
 ---
 
-## Appendix: On TDD
+### On TDD
 
 In the agentic context, TDD serves a crucial additional purpose: it provides an objective, programmatic signal for whether a phase is complete. The agent writes tests first, confirms they fail, implements until they pass, then moves on. No ambiguity, no drift—the tests are the contract. This grounds the loop in something verifiable rather than relying on the agent's self-assessment.
