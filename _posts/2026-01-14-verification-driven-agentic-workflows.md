@@ -9,9 +9,9 @@ mermaid: true
 
 ![](/images/verification-driven-agentic-workflows/cover.png)
 
-Today, I am introducing the concept of verification-driven agentic workflows. The approach: define (and continually refine) verification criteria across the entire lifecycle of a workflow, then let the agent iterate until those criteria are met. Checking in as the human at the points that you deem reasonable.
+This article introduces the concept of verification-driven agentic workflows. The approach: define (and continually refine) verification criteria across the entire lifecycle of an agentic workflow, letting the agent iterate until those criteria are met. Checking in as the human at the points that you deem reasonable.
 
-The insight underneath is simple: **verifiable tasks are automatable tasks**. This is a distillation of an [original idea](https://karpathy.bearblog.dev/verifiability/) from Andrej Karpathy on his idea of Software 2.0. It is also inherits from RLVR (Reinforcement Learning from Verifiable Rewards)—the approach that's driven the recent wave of reasoning models. Tests are resettable, efficient, and provide non-gameable reward signals. Give the model a verification target and let it practice.
+The insight underneath is simple: **verifiable tasks are automatable tasks**. This builds on Andrej Karpathy's [observation](https://karpathy.bearblog.dev/verifiability/) that verifiability is the key predictor for AI automation. If a task has a resettable environment, allows many attempts, and provides an automated reward signal, AI can practice until the task is mastered. This principle also inherits from RLVR (Reinforcement Learning from Verifiable Rewards)—the approach that's driven the recent wave of reasoning models. Tests are resettable, efficient, and provide non-gameable reward signals. Give the model a verification target and let it practice.
 
 ## From Principle to Practice
 
@@ -32,9 +32,9 @@ These are tuned to my engineering practices—simplicity, architectural consiste
 
 ## The Spec File
 
-The spec file is where your definition of "right" becomes structure. It's the artifact that bridges planning and execution—objectives, phases, acceptance criteria, validation strategy. When the context window refreshes or the agent restarts, it picks up where it left off.
+The spec file is where your definition of "right" becomes structure. It's the artifact that bridges planning and execution—objectives, phases, acceptance criteria, validation strategy. When the context window refreshes or the agent restarts, the agent picks up where it left off.
 
-But the spec file isn't just input to verification—it's subject to it. The workflows I'll present include a review phase that verifies the plan itself: Does it align with codebase patterns? Is it over-engineered? Does the test coverage match your standards? The agent iterates on the spec until these criteria are met, *before* implementation begins.
+But the spec file isn't just input to verification—it's also subject to verification. The workflows I'll present include a review phase that verifies the plan itself: Does it align with codebase patterns? Is it over-engineered? Does the test coverage match your standards? The agent iterates on the spec until these criteria are met, *before* implementation begins.
 
 Here's how mine are structured:
 
@@ -189,7 +189,7 @@ flowchart LR
 
 ## One Application
 
-I've used this workflow to build a few personal applications of ranging complexity (Future posts coming on these perhaps!). These codebases have extremely high unit test coverage on human-confirmed test cases, plus suites of validation tests derived from the specs that created them. Those validation tests run via Playwright and can be executed at any time to verify respective feature sets still works.
+I've used this workflow to build a few personal applications of ranging complexity (Future posts coming on these perhaps!). These codebases have extremely high unit test coverage on human-confirmed test cases, plus suites of validation tests derived from the specs that created them. Those validation tests run via Playwright and can be executed at any time to verify respective feature sets still work.
 
 ## The Take-away
 
@@ -226,3 +226,25 @@ The workflows in this article verify against criteria I've found valuable over 2
 - **API stability** — Verify backward compatibility (the opposite of my preference), versioning, deprecation patterns
 
 The point isn't that my criteria are right—it's that you define yours explicitly, encode them into your verification loop (in this example, that's the PATTERNS.md), and let the agent verify against them. The workflow is the same; the verification targets are yours to choose.
+
+---
+
+### Software 1.0 vs. 2.0: The Specifiability to Verifiability Shift {#software-1-vs-2}
+
+Karpathy draws a parallel between two eras of automation:
+
+**Software 1.0 (Traditional Programming):**
+- If you could **specify** a task as an explicit algorithm (step-by-step rules), you could write code to automate it
+- Examples: typing, bookkeeping, calculations, data entry
+- These were "rote, easy to specify" transformations of information
+- The key question was: *Can you write down the exact rules?*
+
+**Software 2.0 (AI/Neural Nets):**
+- If you can **verify** whether an attempt succeeded, AI can learn to do it via reinforcement learning
+- The key question is: *Can the AI practice and get feedback?*
+
+**The Insight**
+
+In the 1980s, if you wanted to predict which jobs computers would automate, you'd ask: "Is this task specifiable?" Jobs that were mechanical rule-following (calculators, typists, bookkeepers) got automated. Jobs requiring judgment, creativity, or fuzzy pattern-matching didn't.
+
+Now, with AI, the predictive question shifts to: "Is this task verifiable?" If you can programmatically check whether the output is correct, AI can iterate until it gets it right.
